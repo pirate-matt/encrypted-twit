@@ -1,0 +1,4247 @@
+<!doctype html>
+<html 
+      lang="id-x-mtfrom-en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="157101835696-ooapojlodmuabs2do2vuhhnf90bccmoi.apps.googleusercontent.com">
+    <meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award">
+    <meta property="og:site_name" content="Chrome for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#1a73e8"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/chrome/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//apis.google.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/css/app.css">
+      
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/images/touchicon-180.png"><link rel="canonical" href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=id"><link rel="search" type="application/opensearchdescription+xml"
+            title="Chrome for Developers" href="https://developer.chrome.com/s/opensearch.xml?hl=id">
+      <link rel="alternate" hreflang="en"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api" /><link rel="alternate" hreflang="x-default" href="https://developer.chrome.com/docs/extensions/ai/prompt-api" /><link rel="alternate" hreflang="ar"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=zh-tw" /><link rel="alternate" hreflang="nl"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=nl" /><link rel="alternate" hreflang="fa"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=ru" /><link rel="alternate" hreflang="es-419"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=vi" /><link rel="alternate" hreflang="en-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api" /><link rel="alternate" hreflang="x-default" href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api" /><link rel="alternate" hreflang="ar-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=ar" /><link rel="alternate" hreflang="bn-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=bn" /><link rel="alternate" hreflang="zh-Hans-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=zh-tw" /><link rel="alternate" hreflang="nl-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=nl" /><link rel="alternate" hreflang="fa-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=fa" /><link rel="alternate" hreflang="fr-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=fr" /><link rel="alternate" hreflang="de-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=de" /><link rel="alternate" hreflang="he-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=he" /><link rel="alternate" hreflang="hi-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=hi" /><link rel="alternate" hreflang="id-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=id" /><link rel="alternate" hreflang="it-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=it" /><link rel="alternate" hreflang="ja-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=ja" /><link rel="alternate" hreflang="ko-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=ko" /><link rel="alternate" hreflang="pl-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=pl" /><link rel="alternate" hreflang="pt-BR-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=pt-br" /><link rel="alternate" hreflang="ru-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=ru" /><link rel="alternate" hreflang="es-419-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=es-419" /><link rel="alternate" hreflang="th-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=th" /><link rel="alternate" hreflang="tr-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=tr" /><link rel="alternate" hreflang="vi-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/ai/prompt-api?hl=vi" /><title>Prompt API di Ekstensi Chrome &nbsp;|&nbsp; AI on Chrome &nbsp;|&nbsp; Chrome for Developers</title>
+
+<meta property="og:title" content="Prompt API di Ekstensi Chrome &nbsp;|&nbsp; AI on Chrome &nbsp;|&nbsp; Chrome for Developers"><meta name="description" content="Temukan kemungkinan tak terbatas dari Prompt API di Ekstensi Chrome.">
+  <meta property="og:description" content="Temukan kemungkinan tak terbatas dari Prompt API di Ekstensi Chrome."><meta property="og:url" content="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=id"><meta property="og:image" content="https://developer.chrome.com/static/docs/extensions/ai/prompt-api/images/cover.png?hl=id">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="id"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "dateModified": "2024-11-28",
+    "headline": "Prompt API di Ekstensi Chrome"
+  }
+</script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Docs",
+      "item": "https://developer.chrome.com/docs"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI on Chrome",
+      "item": "https://developer.chrome.com/docs/ai"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Prompt API di Ekstensi Chrome",
+      "item": "https://developer.chrome.com/docs/extensions/ai/prompt-api"
+    }]
+  }
+  </script><link rel="alternate machine-translated-from" hreflang="en"
+        href="https://developer.chrome.com/docs/extensions/ai/prompt-api?hl=en">
+  
+
+  <meta name="author" value="Thomas Steiner" />
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+    
+      <link rel="stylesheet" href="/extras.css"></head>
+  <body class=""
+        template="page"
+        theme="chrome-theme"
+        type="article"
+        
+        
+        appearance
+        layout="docs"
+        
+        
+        
+        
+        display-toc
+        pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+    <section class="devsite-wrapper">
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar><devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner nocontent">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Buka menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="chromeForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme"
+            alt="Chrome for Developers">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/images/lockup.svg" class="devsite-site-logo" alt="Chrome for Developers">
+  </picture>
+  
+</a>
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Tab atas">
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/case-studies?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/case-studies?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - dapatkan inspirasi"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Dapatkan inspirasi"
+         
+           track-name="dapatkan inspirasi"
+         
+       >
+    Dapatkan inspirasi
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/blog?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/blog?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - blog"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Blog"
+         
+           track-name="blog"
+         
+       >
+    Blog
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab class="devsite-dropdown
+    devsite-dropdown-full
+    devsite-active
+    
+    ">
+  
+    <a href="https://developer.chrome.com/docs?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/docs?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - dokumen"
+       track-metadata-module="primary nav"
+       aria-label="Dokumen, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Dokumen"
+         
+           track-name="dokumen"
+         
+       >
+    Dokumen
+  
+    </a>
+  
+  
+    <a href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false"
+       aria-label="Menu dropdown untuk Dokumen"
+       track-type="nav"
+       track-metadata-eventdetail="https://developer.chrome.com/docs?hl=id"
+       track-metadata-position="nav - dokumen"
+       track-metadata-module="primary nav"
+       
+        
+          data-category="Site-Wide Custom Events"
+        
+          data-label="Tab: Dokumen"
+        
+          track-name="dokumen"
+        
+      
+       class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+  
+  <div class="devsite-tabs-dropdown" role="menu" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       build-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Membangun dengan Chrome</li>
+              
+              
+                <li class="devsite-nav-description">Pelajari cara kerja Chrome, berpartisipasilah dalam uji coba origin, dan bangun aplikasi dengan Chrome di mana saja.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/web-platform?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/web-platform?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="membangun dengan chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Platform Web
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/capabilities?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/capabilities?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="membangun dengan chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Kemampuan
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/chromedriver?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/chromedriver?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="membangun dengan chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      ChromeDriver
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/extensions?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/extensions?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="membangun dengan chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Extensions
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/webstore?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/webstore?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="membangun dengan chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chrome Web Store
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/chromium?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/chromium?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="membangun dengan chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chromium
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/aurora?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/aurora?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="membangun dengan chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Aurora
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/android?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/android?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="membangun dengan chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Web di Android
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/origintrials/?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/origintrials/?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="membangun dengan chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Uji coba origin
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/release-notes?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/release-notes?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="membangun dengan chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Catatan rilis
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       productivity-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Produktivitas</li>
+              
+              
+                <li class="devsite-nav-description">Ciptakan pengalaman terbaik untuk pengguna Anda dengan alat terbaik di web.</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/devtools?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/devtools?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="produktivitas"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      DevTools
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/lighthouse?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/lighthouse?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="produktivitas"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Mercusuar
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/crux?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/crux?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="produktivitas"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Laporan UX Chrome
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/accessibility?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/accessibility?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="produktivitas"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Aksesibilitas
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       dcc-subnav second-column-list">
+              
+              
+                <li class="devsite-nav-description">Selesaikan berbagai hal lebih cepat dan lebih rapi dengan library siap pakai kami.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/workbox?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/workbox?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="produktivitas"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Workbox
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/puppeteer?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/puppeteer?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="produktivitas"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Boneka
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       experience-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Pengalaman</li>
+              
+              
+                <li class="devsite-nav-description">Desain web yang menarik dan berperforma tinggi dengan Chrome.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/ai?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/ai?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="pengalaman"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      AI
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/performance?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/performance?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="pengalaman"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Performa
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/css-ui?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/css-ui?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="pengalaman"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      CSS dan UI
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/identity?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/identity?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="pengalaman"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Identitas
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/payments?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/payments?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="pengalaman"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Pembayaran
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/privacy-security?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/privacy-security?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="pengalaman"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Privasi dan keamanan
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       resources-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Referensi</li>
+              
+              
+                <li class="devsite-nav-description">Lainnya dari tim Chrome.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="referensi"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Semua dokumentasi
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/baseline?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/baseline?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="referensi"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Dasar pengukuran
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="referensi"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      web.dev
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://pagespeed.web.dev?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://pagespeed.web.dev?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="referensi"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Audit PageSpeed Insights
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/new?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/new?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - baru di chrome"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Baru di Chrome"
+         
+           track-name="baru di chrome"
+         
+       >
+    Baru di Chrome
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    
+    project-name="AI on Chrome"
+    tenant-name="Chrome for Developers"
+    
+    
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://developer.chrome.com/s/results?hl=id" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Buka penelusuran"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Penelusuran"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Penelusuran"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+          </div>
+          <div class="devsite-search-shortcut-icon-container" aria-hidden="true">
+            <kbd class="devsite-search-shortcut-icon">/</kbd>
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Tutup penelusuran"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+        
+
+        <devsite-appearance-selector></devsite-appearance-selector>
+
+        
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="nl"
+        >Nederlands</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+        
+
+        
+          
+          
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Masuk</span>
+            
+        </devsite-user>
+           
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+                  
+                  
+                  <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs/ai?hl=id"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Lower Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="AI on Chrome"
+      
+    >
+    
+        AI on Chrome
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+                
+              
+              
+            </div>
+            
+          </div>
+          
+        
+      
+      
+        <div class="devsite-doc-set-nav-row">
+          
+          
+            
+            
+  <devsite-tabs class="lower-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Tab bawah">
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/docs/ai?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/ai?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - ai"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: AI"
+         
+           track-name="ai"
+         
+       >
+    AI
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  class="devsite-active">
+            
+    <a href="https://developer.chrome.com/docs/ai/built-in?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/ai/built-in?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - bawaan"
+       track-metadata-module="primary nav"
+       aria-label="Bawaan, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Bawaan"
+         
+           track-name="bawaan"
+         
+       >
+    Bawaan
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/docs/web-platform/webgpu?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/web-platform/webgpu?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - gpu web"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: GPU Web"
+         
+           track-name="gpu web"
+         
+       >
+    GPU Web
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/docs/extensions/ai?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/extensions/ai?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - ekstensi dan ai"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Ekstensi dan AI"
+         
+           track-name="ekstensi dan ai"
+         
+       >
+    Ekstensi dan AI
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/docs/devtools/ai-assistance?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/devtools/ai-assistance?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - devtools dan ai"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: DevTools dan AI"
+         
+           track-name="devtools dan ai"
+         
+       >
+    DevTools dan AI
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+          
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+
+  
+</devsite-header>
+      <devsite-book-nav scrollbars >
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     hidden>
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Ketik untuk memfilter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Hapus filter"
+        aria-label="Hapus filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent"
+     aria-label="Menu samping">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Tutup navigasi">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="chromeForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme"
+            alt="Chrome for Developers">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/images/lockup.svg" class="devsite-site-logo" alt="Chrome for Developers">
+  </picture>
+  
+</a>
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/case-studies"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Dapatkan inspirasi"
+      
+        track-name="dapatkan inspirasi"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Dapatkan inspirasi"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Dapatkan inspirasi
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/blog"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Blog"
+      
+        track-name="blog"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Blog"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Blog
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Dokumen"
+      
+        track-name="dokumen"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Dokumen"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Dokumen
+   </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Dokumen"
+      
+        track-name="dokumen"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Dokumen">
+      Lainnya
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Dokumen">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+                <ul class="devsite-nav-responsive-tabs">
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/ai"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: AI"
+      
+        track-name="ai"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: AI"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      AI
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/ai/built-in"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Bawaan"
+      
+        track-name="bawaan"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Bawaan"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip menu="_book">
+      Bawaan
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/web-platform/webgpu"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: GPU Web"
+      
+        track-name="gpu web"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: GPU Web"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      GPU Web
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/extensions/ai"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Ekstensi dan AI"
+      
+        track-name="ekstensi dan ai"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Ekstensi dan AI"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Ekstensi dan AI
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/devtools/ai-assistance"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: DevTools dan AI"
+      
+        track-name="devtools dan ai"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: DevTools dan AI"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      DevTools dan AI
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/new"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Baru di Chrome"
+      
+        track-name="baru di chrome"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Baru di Chrome"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Baru di Chrome
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Gemini Nano untuk Chrome</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/docs/ai/built-in"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/ai/built-in"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/ai/built-in"
+      ><span class="devsite-nav-text" tooltip>AI bawaan</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/ai/get-started"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/ai/get-started"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/ai/get-started"
+      ><span class="devsite-nav-text" tooltip>Mulai</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/ai/client-side"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/ai/client-side"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/ai/client-side"
+      ><span class="devsite-nav-text" tooltip>Manfaat AI sisi klien</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>API</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/docs/ai/built-in-apis"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/ai/built-in-apis"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/ai/built-in-apis"
+      ><span class="devsite-nav-text" tooltip>Status dan ringkasan API</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-experimental"><a href="/docs/ai/translator-api"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/ai/translator-api"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/ai/translator-api"
+      ><span class="devsite-nav-text" tooltip>Translator API</span><span class="devsite-nav-icon material-icons"
+        data-icon="experimental"
+        data-title="Eksperimental!"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-experimental"><a href="/docs/ai/language-detection"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/ai/language-detection"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/ai/language-detection"
+      ><span class="devsite-nav-text" tooltip>Language Detector API</span><span class="devsite-nav-icon material-icons"
+        data-icon="experimental"
+        data-title="Eksperimental!"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-experimental"><a href="/docs/ai/summarizer-api"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/ai/summarizer-api"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/ai/summarizer-api"
+      ><span class="devsite-nav-text" tooltip>API Ringkas</span><span class="devsite-nav-icon material-icons"
+        data-icon="experimental"
+        data-title="Eksperimental!"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-experimental"><a href="/docs/extensions/ai/prompt-api"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/ai/prompt-api"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/ai/prompt-api"
+      ><span class="devsite-nav-text" tooltip>Prompt API di Ekstensi</span><span class="devsite-nav-icon material-icons"
+        data-icon="experimental"
+        data-title="Eksperimental!"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Build dengan AI</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/docs/ai/product-reviews-on-device"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/ai/product-reviews-on-device"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/ai/product-reviews-on-device"
+      ><span class="devsite-nav-text" tooltip>Dorong ulasan yang lebih baik dengan AI sisi klien</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/ai/evaluate-reviews"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/ai/evaluate-reviews"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/ai/evaluate-reviews"
+      ><span class="devsite-nav-text" tooltip>Mengevaluasi ulasan dengan AI sisi server</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/ai/translate-on-device"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/ai/translate-on-device"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/ai/translate-on-device"
+      ><span class="devsite-nav-text" tooltip>Menerjemahkan di perangkat</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/ai/cache-models"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/ai/cache-models"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/ai/cache-models"
+      ><span class="devsite-nav-text" tooltip>Model cache</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/extensions/ai"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/ai"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/ai"
+      ><span class="devsite-nav-text" tooltip>Ekstensi dan AI</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Referensi</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/docs/ai/team"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/ai/team"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/ai/team"
+      ><span class="devsite-nav-text" tooltip>Temui tim Chrome</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://ai.google.dev/tutorials/get_started_node"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: https://ai.google.dev/tutorials/get_started_node"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="https://ai.google.dev/tutorials/get_started_node"
+      ><span class="devsite-nav-text" tooltip>Gemini API di Node.js</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="Eksternal"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://ai.google.dev/tutorials/get_started_web"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: https://ai.google.dev/tutorials/get_started_web"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="https://ai.google.dev/tutorials/get_started_web"
+      ><span class="devsite-nav-text" tooltip>Gemini API di aplikasi web</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="Eksternal"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://web.dev/explore/ai"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: https://web.dev/explore/ai"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="https://web.dev/explore/ai"
+      ><span class="devsite-nav-text" tooltip>AI di Web.dev</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="Eksternal"
+        aria-hidden="true"></span></a></li>
+          </ul>
+        
+        
+          
+    
+  
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Dokumen"
+          aria-label="Menu samping" hidden>
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Membangun dengan Chrome
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/web-platform"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Platform Web"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Platform Web
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/capabilities"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Kemampuan"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Kemampuan
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/chromedriver"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ChromeDriver"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ChromeDriver
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/extensions"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Extensions"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Extensions
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/webstore"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome Web Store"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chrome Web Store
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/chromium"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chromium"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chromium
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/aurora"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Aurora"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Aurora
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/android"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Web di Android"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Web di Android
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developer.chrome.com/origintrials/"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Uji coba origin"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Uji coba origin
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/release-notes"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Catatan rilis"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Catatan rilis
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Produktivitas
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/devtools"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: DevTools"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      DevTools
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/lighthouse"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Mercusuar"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Mercusuar
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/crux"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Laporan UX Chrome"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Laporan UX Chrome
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/accessibility"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Aksesibilitas"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Aksesibilitas
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/workbox"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Workbox"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Workbox
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/puppeteer"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Boneka"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Boneka
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Pengalaman
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/ai"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: AI"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      AI
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/performance"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Performa"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Performa
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/css-ui"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: CSS dan UI"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      CSS dan UI
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/identity"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Identitas"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Identitas
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/payments"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Pembayaran"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Pembayaran
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/privacy-security"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Privasi dan keamanan"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Privasi dan keamanan
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Referensi
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Semua dokumentasi"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Semua dokumentasi
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://web.dev/baseline"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Dasar pengukuran"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Dasar pengukuran
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://web.dev"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: web.dev"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      web.dev
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://pagespeed.web.dev"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Audit PageSpeed Insights"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Audit PageSpeed Insights
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+  
+        
+        
+          
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+        
+      </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            
+              has-book-nav
+              has-sidebar
+            >
+          
+          
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="Pada halaman ini"
+                            depth="2"
+                            scrollbars
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav">
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+  
+  
+    <div class="devsite-banner devsite-banner-translated nocontent">
+      <div class="devsite-banner-message">
+        <div class="devsite-banner-message-text">
+          <img src="https://developer.chrome.com/_static/images/translated.svg?hl=id"
+               class="devsite-banner-translated-image invert"
+               alt="">
+          <span class="devsite-banner-translated-text">
+            
+            Halaman ini diterjemahkan oleh <a href="//cloud.google.com/translate/?hl=id">Cloud Translation API</a>.
+          </span>
+        </div>
+        <devsite-switch-to-english-button></devsite-switch-to-english-button>
+      </div>
+    </div>
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation">
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/?hl=id"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        Beranda
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs?hl=id"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail="Docs"
+      
+    >
+    
+        Docs
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs/ai?hl=id"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail="AI on Chrome"
+      
+    >
+    
+        AI on Chrome
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs/ai/built-in?hl=id"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="4"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="4"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        Bawaan
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+    <h1 class="devsite-page-title" tabindex="-1">
+      Prompt API di Ekstensi Chrome
+      
+    </h1>
+  <devsite-feature-tooltip
+      ack-key="AckCollectionsBookmarkTooltipDismiss"
+      analytics-category="Site-Wide Custom Events"
+      analytics-action-show="Callout Profile displayed"
+      analytics-action-close="Callout Profile dismissed"
+      analytics-label="Create Collection Callout"
+      class="devsite-page-bookmark-tooltip nocontent"
+      dismiss-button="true"
+      id="devsite-collections-dropdown"
+      
+      dismiss-button-text="Tutup"
+
+      
+      close-button-text="Oke">
+
+    
+    <devsite-bookmark></devsite-bookmark>
+
+    <span slot="popout-heading">
+      
+      Tetap teratur dengan koleksi
+    </span>
+    <span slot="popout-contents">
+      
+      Simpan dan kategorikan konten berdasarkan preferensi Anda.
+    </span>
+  </devsite-feature-tooltip>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  
+    
+  
+
+  
+
+
+
+
+
+
+<div class="devsite-article-body clearfix
+  ">
+
+  
+    
+    
+
+
+
+
+<p><style>
+.wd-authors {
+  --avatar-size: 65px;
+  display: flex;
+  gap: 2em;
+}
+
+.wd-author {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  line-height: calc(var(--avatar-size) / 2);
+}
+
+.wd-author img {
+  border-radius: 50%;
+  height: var(--avatar-size, 65px);
+  width: var(--avatar-size, 65px);
+}
+
+.dcc-authors {
+  --avatar-size: 65px;
+  display: flex;
+  gap: 2em;
+}
+
+.dcc-author {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  line-height: calc(var(--avatar-size) / 2);
+}
+
+.dcc-author img {
+  border-radius: 50%;
+  height: var(--avatar-size, 65px);
+  width: var(--avatar-size, 65px);
+}
+
+.dcc-author__links a {
+  margin-inline-end: 6px;
+}
+
+.dcc-author__links a:last-of-type {
+  margin-inline-end: 0;
+}
+</style>
+
+</p><div class="dcc-authors" translate="no">
+  
+    
+    
+      <div class="dcc-author">
+        
+          <img alt="Thomas Steiner" class="devsite-landing-row-item-icon" decoding="async" height="64" loading="lazy" src="https://web.dev/images/authors/thomassteiner.jpg?hl=id" width="64" /> 
+        
+        <div>
+          <span> 
+            Thomas Steiner
+          </span>
+          <div class="dcc-author__links">
+            
+              <a aria-label="Thomas Steiner on X" href="https://twitter.com/tomayac" rel="me">
+                <svg height="22" viewBox="0 0 300 271" width="22" xmlns="http://www.w3.org/2000/svg">
+                  <title>X</title>
+                  <path d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z" fill="currentColor"></path>
+                </svg></a>
+            
+            
+              <a aria-label="Thomas Steiner on GitHub" href="https://github.com/tomayac" rel="me">
+                <svg height="22" viewBox="0 0 32.6 31.8" width="22" xmlns="http://www.w3.org/2000/svg">
+                  <title>GitHub</title>
+                  <path clip-rule="evenodd" d="M16.3 0C7.3 0 0 7.3 0 16.3c0 7.2 4.7 13.3 11.1 15.5.8.1 1.1-.4 1.1-.8v-2.8c-4.5 1-5.5-2.2-5.5-2.2-.7-1.9-1.8-2.4-1.8-2.4-1.5-1 .1-1 .1-1 1.6.1 2.5 1.7 2.5 1.7 1.5 2.5 3.8 1.8 4.7 1.4.1-1.1.6-1.8 1-2.2-3.6-.4-7.4-1.8-7.4-8.1 0-1.8.6-3.2 1.7-4.4-.1-.3-.7-2 .2-4.2 0 0 1.4-.4 4.5 1.7 1.3-.4 2.7-.5 4.1-.5 1.4 0 2.8.2 4.1.5 3.1-2.1 4.5-1.7 4.5-1.7.9 2.2.3 3.9.2 4.3 1 1.1 1.7 2.6 1.7 4.4 0 6.3-3.8 7.6-7.4 8 .6.5 1.1 1.5 1.1 3V31c0 .4.3.9 1.1.8 6.5-2.2 11.1-8.3 11.1-15.5C32.6 7.3 25.3 0 16.3 0z" fill="currentColor" fill-rule="evenodd"></path>
+                </svg></a>
+            
+            
+              <a aria-label="Thomas Steiner on Glitch" href="https://glitch.com/@tomayac" rel="me">
+                <svg height="22" viewBox="0 0 32 32" width="22" xmlns="http://www.w3.org/2000/svg">
+                  <title>Gangguan</title>
+                  <path d="M31.734 16.76c-.385-.198-4.536 1.865-5.427 1.693-2.24-.401-1.828-.667-4.839-1.359-1.203-.266-1.031-.109-1.297-.307-.172-.135-.344-.161-.599-.401 4-.719 6.026-1.693 6.734-1.839.76-.146 5.161 1.958 5.427 1.469.266-.495-.964-1.578-.401-3.031.589-1.464-.693-2.422.016-3.583.719-1.161.573-2.932.396-3.026-.396-.203-4.531 1.865-5.438 1.693-2.24-.417-1.828-.682-4.839-1.359-1.203-.271-1.031-.12-1.297-.323-.266-.198-.521-.13-1.036-.974-.521-.839-6.51-2.13-6.906-2.13-.828 0-2.375 2.13-2.375 2.13s-.599 0-2.401.094c-1.802.094-3.375.896-5.495 2.563C-.173 9.737.134 11.414.134 11.414s1.969.667 1.969 1.042c0 .359-1.729.802-1.729.802 1.12 1.411 4.583 2.745 5.464 2.745h.693c-1.438.281-2.823 1.068-4.583 2.438-2.12 1.698-1.813 3.375-1.813 3.375s1.969.667 1.969 1.026-1.729.802-1.729.802c1.12 1.427 4.583 2.76 5.464 2.76.844 0 1.427.026 2.495-.172.078.172.906 1.932 2.599 2.292 1.786.385 2.776.078 2.776.078s.094-.786-.323-1.573c1.547.161 3.307.203 5.026-.068 4.76-.719 7.12-1.865 7.896-2.01.76-.161 5.161 1.948 5.427 1.464.266-.505-.964-1.583-.385-3.036.573-1.469-.708-2.417 0-3.589.719-1.161.573-2.932.396-3.026zM4.615 11.828a1.446 1.446 0 0 1-.297-.042h-.052c-.026-.01-.052-.026-.078-.042l-.052-.01-.083-.042h-.052a.418.418 0 0 1-.068-.042l-.068-.052-.063-.036-.057-.042c-.021-.016-.042-.036-.063-.052l-.042-.042c-.026-.026-.047-.052-.068-.078l-.026-.031a1.954 1.954 0 0 1-.094-.104l-.026-.026c-.021-.036-.036-.073-.052-.109l-.026-.036-.057-.083c-.005-.021-.016-.042-.026-.063l-.026-.083-.026-.052-.016-.094-.01-.068c-.01-.026-.021-.052-.026-.078v-.068c.094.573.557 1.016 1.104 1.016.63 0 1.146-.573 1.146-1.297 0-.719-.505-1.307-1.146-1.307-.625 0-1.13.573-1.146 1.281 0-.932.667-1.693 1.495-1.693.823 0 1.479.745 1.479 1.682 0 .932-.667 1.693-1.479 1.693zm-1-1.265c0-.203.13-.365.318-.365s.307.161.307.365c0 .198-.135.344-.307.344s-.318-.161-.318-.344zm1 11.651a.712.712 0 0 1-.146 0l-.057-.016a.6.6 0 0 1-.094-.01l-.052-.016-.078-.026-.052-.026c-.031-.005-.057-.016-.083-.026l-.052-.026c-.021-.016-.047-.026-.068-.042L3.881 22l-.068-.052-.052-.042-.068-.052-.042-.042c-.031-.031-.063-.057-.089-.094a.671.671 0 0 1-.094-.12l-.031-.026c-.016-.031-.036-.063-.052-.094l-.026-.052c-.016-.026-.036-.052-.052-.078l-.026-.057-.026-.094-.026-.052-.031-.094-.01-.052c-.01-.031-.021-.063-.026-.094v-.068c.094.573.557 1.016 1.104 1.016.63 0 1.146-.573 1.146-1.292 0-.724-.505-1.297-1.146-1.297-.625 0-1.13.563-1.146 1.266 0-.932.667-1.693 1.495-1.693.823 0 1.479.76 1.479 1.682 0 .917-.667 1.693-1.479 1.693zm-1-1.266c0-.188.13-.349.318-.349s.307.161.307.349c0 .188-.135.344-.307.344s-.318-.146-.318-.344zm6.77-7.333v-.042l.042-.078.078-.297c.182-.583.344-1.172.479-1.771.161-.708.229-1.281.203-1.599-.016-.12-.031-.245-.052-.359a8.276 8.276 0 0 0-.521-1.724l-.083-.172-.026-.068c-.12-.266.057-.573.323-.557h.188l.531.036 2.104.109 1.151.078a28.24 28.24 0 0 1 10.573 2.828l.891.401c.172.078.266.307.188.505-.068.188-.266.292-.438.214l-.896-.401a27.695 27.695 0 0 0-10.359-2.786l-1.146-.068-.51-.026-1.599-.094h-.156c.188.51.339 1.031.453 1.562l.063.427c.042.453-.036 1.078-.224 1.88l-.203.823a23.62 23.62 0 0 1-.385 1.323l-.026.078v.042c-.068.188-.266.292-.438.214-.177-.068-.271-.292-.203-.495zm-2-6.349a.307.307 0 0 1 .479.026c.208.26.396.536.563.828.292.531.495 1.068.547 1.615.026.307 0 .651-.052 1.026a8.718 8.718 0 0 1-.271 1.104c-.094.313-.208.62-.333.922-.078.188-.276.266-.453.172-.172-.094-.24-.318-.156-.521l.026-.052.068-.172c.073-.198.146-.396.214-.599.099-.328.182-.661.24-1 .052-.307.063-.573.052-.802a3.47 3.47 0 0 0-.453-1.292 4.794 4.794 0 0 0-.443-.667l-.036-.042a.417.417 0 0 1 .026-.531zm1.537 13.869c-.063.38-.151.76-.271 1.13a9.549 9.549 0 0 1-.333.906c-.078.188-.276.266-.453.177-.172-.094-.24-.323-.156-.521l.026-.057.068-.172c.073-.198.146-.396.214-.599.099-.328.182-.661.24-1 .052-.307.063-.573.036-.802a3.365 3.365 0 0 0-.438-1.276 4.794 4.794 0 0 0-.443-.667l-.036-.057a.417.417 0 0 1 .026-.531.3.3 0 0 1 .464 0c.214.266.396.547.563.839.292.536.495 1.083.547 1.615.026.307 0 .651-.052 1.026zm16.531.157c-.068.188-.266.297-.438.214l-.896-.401a27.695 27.695 0 0 0-10.359-2.786l-1.135-.063h-.063l-.458-.026c-.583-.036-1.172-.068-1.755-.094l.036.078c.234.615.396 1.255.479 1.906.042.453-.036 1.078-.224 1.88l-.203.828a24.99 24.99 0 0 1-.385 1.333l-.026.068v.036c-.068.203-.266.297-.438.229a.42.42 0 0 1-.203-.51v-.026l.042-.078.078-.292c.182-.589.344-1.177.479-1.776.161-.708.229-1.281.203-1.599-.016-.12-.031-.24-.052-.359a7.996 7.996 0 0 0-.521-1.708l-.052-.12-.031-.068-.026-.063c-.12-.271.057-.578.323-.563h.188l.531.042 2.12.104 1.135.083a28.14 28.14 0 0 1 10.573 2.823l.891.401c.172.078.266.307.188.505z" fill="currentColor"></path>
+                </svg></a>
+            
+            
+              <a aria-label="Thomas Steiner on LinkedIn" href="https://www.linkedin.com/in/thomassteinerlinkedin" rel="me">
+                <svg height="22" viewBox="0 0 200 200" width="22" xmlns="http://www.w3.org/2000/svg">
+                  <title>LinkedIn</title>
+                  <path d="M185.2 0H14.8C6.6 0 0 6.4 0 14.3v171.3c0 7.9 6.6 14.3 14.8 14.3h170.4c8.1 0 14.8-6.4 14.8-14.3V14.3C199.9 6.4 193.3 0 185.2 0zM60.6 167.3H30.4V77.1h30.2v90.2zM45.5 64.8h-.2c-10.1 0-16.7-6.9-16.7-15.6 0-8.8 6.7-15.6 17.1-15.6 10.3 0 16.7 6.7 16.9 15.6 0 8.6-6.5 15.6-17.1 15.6zm124 102.5h-30.2V119c0-12.1-4.4-20.4-15.3-20.4-8.4 0-13.3 5.6-15.5 11-.8 1.9-1 4.6-1 7.3v50.4H77.3s.4-81.8 0-90.3h30.2v12.8c4-6.1 11.2-14.9 27.2-14.9 19.9 0 34.8 12.9 34.8 40.6v51.8zm-62.2-77.1c0-.1.1-.2.2-.3v.3h-.2z" fill="currentColor"></path>
+                </svg></a>
+            
+            
+              <a aria-label="Thomas Steiner on Mastodon" href="https://toot.cafe/@tomayac" rel="me">
+                <svg height="22" viewBox="0 0 16 16" width="22" xmlns="http://www.w3.org/2000/svg">
+                  <title>Mastodon</title>
+                  <path d="M 15.659 9.592 C 15.424 10.72 13.553 11.956 11.404 12.195 C 10.283 12.32 9.18 12.434 8.003 12.384 C 6.079 12.302 4.56 11.956 4.56 11.956 C 4.56 12.13 4.572 12.297 4.595 12.452 C 4.845 14.224 6.478 14.33 8.025 14.379 C 9.586 14.429 10.976 14.02 10.976 14.02 L 11.04 15.337 C 11.04 15.337 9.948 15.884 8.003 15.984 C 6.93 16.039 5.598 15.959 4.047 15.576 C 0.683 14.746 0.104 11.4 0.015 8.006 C -0.012 6.998 0.005 6.048 0.005 5.253 C 0.005 1.782 2.443 0.765 2.443 0.765 C 3.672 0.238 5.782 0.017 7.975 0 L 8.029 0 C 10.221 0.017 12.332 0.238 13.561 0.765 C 13.561 0.765 15.999 1.782 15.999 5.253 C 15.999 5.253 16.03 7.814 15.659 9.592 Z M 13.124 5.522 L 13.124 9.725 L 11.339 9.725 L 11.339 5.646 C 11.339 4.786 10.951 4.35 10.175 4.35 C 9.317 4.35 8.887 4.867 8.887 5.891 L 8.887 8.124 L 7.113 8.124 L 7.113 5.891 C 7.113 4.867 6.683 4.35 5.825 4.35 C 5.049 4.35 4.661 4.786 4.661 5.646 L 4.661 9.725 L 2.876 9.725 L 2.876 5.522 C 2.876 4.663 3.111 3.981 3.582 3.476 C 4.067 2.971 4.703 2.712 5.493 2.712 C 6.406 2.712 7.098 3.039 7.555 3.695 L 8 4.39 L 8.445 3.695 C 8.902 3.039 9.594 2.712 10.507 2.712 C 11.297 2.712 11.933 2.971 12.418 3.476 C 12.889 3.981 13.124 4.663 13.124 5.522 Z" fill="currentColor" style="stroke:none;stroke-miterlimit:10;fill-rule:evenodd;"></path>
+                </svg></a>
+            
+            
+              <a aria-label="Thomas Steiner on Bluesky" href="https://bsky.app/profile/tomayac.com" rel="me">
+                <svg height="22" viewBox="0 0 568 501" width="22" xmlns="http://www.w3.org/2000/svg">
+                  <title>Bluesky</title>
+                  <path d="M123.121 33.664C188.241 82.553 258.281 181.68 284 234.873c25.719-53.192 95.759-152.32 160.879-201.21C491.866-1.611 568-28.906 568 57.947c0 17.346-9.945 145.713-15.778 166.555-20.275 72.453-94.155 90.933-159.875 79.748C507.222 323.8 536.444 388.56 473.333 453.32c-119.86 122.992-172.272-30.859-185.702-70.281-2.462-7.227-3.614-10.608-3.631-7.733-.017-2.875-1.169.506-3.631 7.733-13.43 39.422-65.842 193.273-185.702 70.281-63.111-64.76-33.89-129.52 80.986-149.071-65.72 11.185-139.6-7.295-159.875-79.748C9.945 203.659 0 75.291 0 57.946 0-28.906 76.135-1.612 123.121 33.664Z" fill="currentColor"></path>
+                </svg>
+              </a>
+            
+            
+              <a aria-label="Thomas Steiner's homepage" href="https://blog.tomayac.com/" rel="me">
+                <svg height="22" viewBox="0 0 30 30" width="22" xmlns="http://www.w3.org/2000/svg">
+                  <title>Halaman Beranda</title>
+                  <circle cx="14.5" cy="14.5" fill="none" r="13.5" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></circle>
+                  <ellipse cx="14.5" cy="14.5" fill="none" rx="6.1" ry="13.5" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></ellipse>
+                  <path d="M1.6 9.6h25.8M1.6 19.4h25.8" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></path>
+                </svg></a>
+            
+          </div>
+        </div>
+      </div>
+    
+  
+</div><p></p>
+
+<p>
+</p><p class="wd-pubdates" style="font-size: 90%; border-bottom: 1px solid var(--devsite-ref-palette--grey200);color: var(--devsite-ref-palette--blue-grey700)">
+  Dipublikasikan: 11 November 2024
+</p>
+<p></p>
+
+<p>Prompt API untuk Ekstensi kini tersedia dalam uji coba origin, sehingga Anda dapat
+mem-build Ekstensi Chrome yang menggunakan <a href="https://deepmind.google/technologies/gemini/nano/?hl=id">Gemini
+Nano</a>, model bahasa
+yang paling efisien, di browser.</p>
+
+<p>Ada banyak kasus penggunaan untuk Prompt API dengan Ekstensi Chrome. Berikut
+beberapa contohnya:</p>
+
+<ul>
+<li><strong>Acara kalender instan.</strong> Kembangkan Ekstensi Chrome yang otomatis
+mengekstrak detail acara dari halaman web, sehingga pengguna dapat membuat entri kalender
+hanya dalam beberapa langkah.</li>
+<li><strong>Ekstraksi kontak yang lancar.</strong> Buat ekstensi yang mengekstrak informasi
+kontak dari situs, sehingga memudahkan pengguna untuk menghubungi bisnis
+atau menambahkan detail ke daftar kontak mereka.</li>
+<li><strong>Pemfilteran konten dinamis.</strong> Buat Ekstensi Chrome yang menganalisis artikel berita dan secara otomatis memburamkan atau menyembunyikan konten berdasarkan topik yang ditentukan pengguna.</li>
+</ul>
+
+<p>Ini hanyalah beberapa kemungkinan, tetapi kami ingin segera melihat karya Anda.</p>
+
+<h2 data-text="Ketersediaan" id="availability" tabindex="-1">Ketersediaan</h2>
+
+<ul>
+<li><p>Bergabung dengan <a href="https://developer.chrome.com/origintrials?hl=id#/view_trial/320318523496726529" target="_blank">asal Prompt API</a></p><a href="https://developer.chrome.com/origintrials?hl=id#/view_trial/320318523496726529" target="_blank">
+
+</a><p><a href="https://developer.chrome.com/origintrials?hl=id#/view_trial/320318523496726529" target="_blank">uji coba</a>, yang berjalan di Chrome 131 hingga 136, untuk membuat Ekstensi dengan API ini.
+Jika Anda baru menggunakan <a href="https://developer.chrome.com/docs/web-platform/origin-trials?hl=id">uji coba origin</a>, ini adalah
+program terbatas waktu yang terbuka untuk semua developer, yang menawarkan akses awal ke
+fitur platform eksperimental. Developer dapat menguji, mengumpulkan masukan pengguna,
+dan melakukan iterasi untuk peluncuran mendatang.</p>
+
+<ul>
+<li>Meskipun mungkin ada batas penggunaan, Anda dapat mengintegrasikan fitur ini untuk
+pengujian langsung dan mengumpulkan masukan pengguna. Tujuannya adalah untuk menginformasikan
+iterasi API ini pada masa mendatang, karena kami berupaya untuk menyediakannya secara lebih luas.</li>
+</ul></li>
+<li><p><a href="http://goo.gle/chrome-ai-dev-preview-join">Bergabunglah dengan program pratinjau awal</a>
+untuk melihat sekilas API AI bawaan baru dan akses ke diskusi di
+mailing list kami.</p></li>
+</ul>
+
+<h2 data-text="Berpartisipasi dalam uji coba asal" id="participate_in_the_origin_trial" tabindex="-1">Berpartisipasi dalam uji coba asal</h2>
+
+<p>Untuk menggunakan Prompt API di Ekstensi Chrome, tambahkan izin <code dir="ltr" translate="no">&quot;aiLanguageModelOriginTrial&quot;</code> ke file <code dir="ltr" translate="no">manifest.json</code> Anda sesuai dengan kutipan berikut, beserta izin lain yang mungkin diperlukan ekstensi Anda.</p>
+
+<p>Untuk mendaftarkan ekstensi Anda ke uji coba origin, gunakan URL
+<code dir="ltr" translate="no">chrome-extension://YOUR_EXTENSION_ID</code> sebagai <strong>Origin Web</strong>. Contohnya,
+<code dir="ltr" translate="no">chrome-extension://ljjhjaakmncibonnjpaoglbhcjeolhkk</code>.</p>
+<aside class="note"><strong>Catatan:</strong><span> Untuk mengetahui detail selengkapnya, lihat <a href="https://developer.chrome.com/docs/web-platform/origin-trials?hl=id#extensions">dokumentasi uji coba origin ekstensi</a>.</span></aside>
+<p><img alt="Pendaftaran Uji Coba Chrome Origin" class="screenshot" src="https://developer.chrome.com/static/docs/extensions/ai/prompt-api/images/ot-web-origin.jpg?hl=id" /></p>
+
+<p>ID ekstensi dibuat secara dinamis. Anda dapat <a href="https://developer.chrome.com/docs/extensions/reference/manifest/key?hl=id#keep-consistent-id">memaksa ID tetap
+stabil</a> dengan menambahkan
+properti <a href="https://developer.chrome.com/docs/extensions/reference/manifest/key?hl=id"><code dir="ltr" translate="no">key</code></a> ke manifes.</p>
+
+<p>Setelah mendaftar ke uji coba asli, Anda akan menerima token yang dihasilkan,
+yang perlu Anda teruskan dalam array sebagai nilai kolom <code dir="ltr" translate="no">trial_tokens</code> dalam
+manifes.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JSON"><code translate="no" dir="ltr"><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"manifest_version"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">3</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"YOUR_EXTENSION_NAME"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"permissions"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-s2">"aiLanguageModelOriginTrial"</span><span class="devsite-syntax-p">],</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"key"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"YOUR_EXTENSION_KEY"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"trial_tokens"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-s2">"GENERATED_TOKEN"</span><span class="devsite-syntax-p">],</span>
+<span class="devsite-syntax-p">}</span>
+</code></pre></devsite-code><aside class="note"><strong>Catatan:</strong><span> Sebaiknya jangan gunakan <code dir="ltr" translate="no">optional_permissions</code>, karena pemberian
+<code dir="ltr" translate="no">aiLanguageModelOriginTrial</code> saat runtime <a href="https://issues.chromium.org/issues/376025586">tidak langsung
+berlaku</a>.</span></aside><aside class="note"><strong>Catatan:</strong><span> Tindakan ini akan memberikan izin sementara, yang hanya berlaku selama durasi
+uji coba origin. Jika API diluncurkan, Anda harus mengupdate dan mengupload ulang ekstensi, menghapus izin yang telah berakhir masa berlakunya, dan menggantinya dengan izin akhir.</span></aside>
+<h3 data-text="Menambahkan dukungan ke localhost" id="add_support_to_localhost" tabindex="-1">Menambahkan dukungan ke localhost</h3>
+
+<p>Untuk mengakses Prompt API di <code dir="ltr" translate="no">localhost</code> selama uji coba origin, Anda harus
+<a href="https://support.google.com/chrome/answer/95414?hl=id">mengupdate Chrome</a> ke versi
+terbaru. Selanjutnya, ikuti langkah-langkah berikut:</p>
+
+<ol>
+<li>Buka <code dir="ltr" translate="no">chrome://flags/#prompt-api-for-gemini-nano</code>.</li>
+<li>Pilih "Diaktifkan".</li>
+<li>Luncurkan kembali Chrome.</li>
+</ol>
+
+<p>Untuk mengonfirmasi bahwa Gemini Nano telah didownload dan berfungsi sebagaimana mestinya, buka DevTools dan
+ketik <code dir="ltr" translate="no">(await ai.assistant.capabilities()).available;</code> ke dalam konsol. Tindakan ini akan menampilkan <code dir="ltr" translate="no">readily</code>.</p>
+
+<h2 data-text="Menggunakan Prompt API" id="use_the_prompt_api" tabindex="-1">Menggunakan Prompt API</h2>
+
+<p>Setelah meminta izin untuk menggunakan Prompt API, Anda dapat mem-build ekstensi. Ada dua fungsi ekstensi baru yang tersedia untuk Anda di
+namespace <code dir="ltr" translate="no">chrome.aiOriginTrial.languageModel</code>:</p>
+
+<ul>
+<li><code dir="ltr" translate="no">capabilities()</code> untuk memeriksa kemampuan model dan apakah
+tersedia.</li>
+<li><code dir="ltr" translate="no">create()</code> untuk memulai sesi model bahasa.</li>
+</ul>
+
+<h3 data-text="Download model" id="model_download" tabindex="-1">Download model</h3>
+
+<p>Prompt API menggunakan model Gemini Nano di Chrome. Meskipun API di-build ke dalam
+Chrome, model didownload secara terpisah saat pertama kali ekstensi menggunakan
+API.</p>
+
+<p>Untuk menentukan apakah model siap digunakan, panggil fungsi <code dir="ltr" translate="no">chrome.aiOriginTrial.languageModel.capabilities()</code> asinkron. API ini menampilkan
+objek <code dir="ltr" translate="no">AILanguageModelCapabilities</code> dengan kolom <code dir="ltr" translate="no">available</code> yang dapat mengambil
+tiga kemungkinan nilai:</p>
+
+<ul>
+<li><code dir="ltr" translate="no">&#39;no&#39;</code>: Browser saat ini mendukung Prompt API, tetapi tidak dapat digunakan
+saat ini. Hal ini dapat terjadi karena beberapa alasan, seperti tidak cukupnya
+kapasitas disk yang tersedia untuk mendownload model.</li>
+<li><code dir="ltr" translate="no">&#39;readily&#39;</code>: Browser saat ini mendukung Prompt API, dan dapat langsung
+digunakan.</li>
+<li><code dir="ltr" translate="no">&#39;after-download&#39;</code>: Browser saat ini mendukung Prompt API, tetapi
+harus mendownload model terlebih dahulu.</li>
+</ul>
+
+<p>Untuk memicu download model dan membuat sesi model bahasa, panggil
+fungsi <code dir="ltr" translate="no">chrome.aiOriginTrial.languageModel.create()</code> asinkron. Jika
+respons terhadap <code dir="ltr" translate="no">capabilities()</code> adalah <code dir="ltr" translate="no">&#39;after-download&#39;</code>, praktik terbaiknya adalah
+memproses progres download. Dengan cara ini, Anda dapat memberi tahu pengguna jika
+download memerlukan waktu.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">aiOriginTrial</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">languageModel</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">monitor</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">m</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">m</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addEventListener</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"downloadprogress"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">e</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-sb">`Downloaded </span><span class="devsite-syntax-si">${</span><span class="devsite-syntax-nx">e</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">loaded</span><span class="devsite-syntax-si">}</span><span class="devsite-syntax-sb"> of </span><span class="devsite-syntax-si">${</span><span class="devsite-syntax-nx">e</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">total</span><span class="devsite-syntax-si">}</span><span class="devsite-syntax-sb"> bytes.`</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">});</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-p">});</span>
+</code></pre></devsite-code>
+<h3 data-text="Kemampuan model" id="model_capabilities" tabindex="-1">Kemampuan model</h3>
+
+<p>Fungsi <code dir="ltr" translate="no">capabilities()</code> juga memberi tahu Anda tentang kemampuan
+model bahasa. Selain <code dir="ltr" translate="no">available</code>, objek
+<code dir="ltr" translate="no">AILanguageModelCapabilities</code> yang dihasilkan juga memiliki kolom berikut:</p>
+
+<ul>
+<li><code dir="ltr" translate="no">defaultTopK</code>: Nilai <a href="https://ai.google.dev/gemini-api/docs/models/generative-models?hl=id">top-K</a> default (default: <code dir="ltr" translate="no">3</code>).</li>
+<li><code dir="ltr" translate="no">maxTopK</code>: Nilai <a href="https://ai.google.dev/gemini-api/docs/models/generative-models?hl=id">top-K maksimum</a> (<code dir="ltr" translate="no">8</code>).</li>
+<li><code dir="ltr" translate="no">defaultTemperature</code>: <a href="https://ai.google.dev/gemini-api/docs/models/generative-models?hl=id">Suhu</a> default
+(<code dir="ltr" translate="no">1.0</code>). Suhu harus antara <code dir="ltr" translate="no">0.0</code> dan <code dir="ltr" translate="no">2.0</code>.</li>
+</ul>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">aiOriginTrial</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">languageModel</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">capabilities</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-c1">// {available: 'readily', defaultTopK: 3, maxTopK: 8, defaultTemperature: 1}</span>
+</code></pre></devsite-code><aside class="note"><strong>Catatan:</strong><span> Kolom <code dir="ltr" translate="no">maxTemperature</code> untuk mendapatkan suhu maksimum
+<a href="https://github.com/explainers-by-googlers/prompt-api/#:%7E:text=attribute%20float%3F-,maxTemperature,-%3B%0A%7D%3B%0A%0Adictionary%20AILanguageModelCreateOptions%20%7B%0A%20%20AbortSignal">ditentukan</a>,
+tetapi belum diterapkan.</span></aside>
+<h3 data-text="Membuat sesi" id="create_a_session" tabindex="-1">Membuat sesi</h3>
+
+<p>Setelah memastikan Prompt API dapat berjalan, Anda membuat sesi dengan
+fungsi <code dir="ltr" translate="no">create()</code>, yang kemudian memungkinkan Anda meminta model dengan
+fungsi <code dir="ltr" translate="no">prompt()</code> atau <code dir="ltr" translate="no">promptStreaming()</code>.</p>
+
+<h4 data-text="Opsi sesi" id="session_options" tabindex="-1">Opsi sesi</h4>
+
+<p>Setiap sesi dapat disesuaikan dengan <code dir="ltr" translate="no">topK</code> dan <code dir="ltr" translate="no">temperature</code> menggunakan objek opsi opsional. Nilai default untuk parameter ini ditampilkan dari
+<code dir="ltr" translate="no">chrome.aiOriginTrial.languageModel.capabilities()</code>.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">capabilities</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">aiOriginTrial</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">languageModel</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">capabilities</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-c1">// Initializing a new session must either specify both `topK` and</span>
+<span class="devsite-syntax-c1">// `temperature` or neither of them.</span>
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">slightlyHighTemperatureSession</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">aiOriginTrial</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">languageModel</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">temperature</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">Math</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">max</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">capabilities</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">defaultTemperature</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">*</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">1.2</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">2.0</span><span class="devsite-syntax-p">),</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">topK</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">capabilities</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">defaultTopK</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-p">});</span>
+</code></pre></devsite-code>
+<p>Objek opsi opsional fungsi <code dir="ltr" translate="no">create()</code> juga menggunakan kolom <code dir="ltr" translate="no">signal</code>,
+yang memungkinkan Anda meneruskan <code dir="ltr" translate="no">AbortSignal</code> untuk menghancurkan sesi.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">controller</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">AbortController</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-nx">stopButton</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onclick</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">controller</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">abort</span><span class="devsite-syntax-p">();</span>
+
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">aiOriginTrial</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">languageModel</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">signal</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">controller</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">signal</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-p">})</span>
+</code></pre></devsite-code>
+<h5 data-text="Perintah sistem" id="system_prompts" tabindex="-1">Perintah sistem</h5>
+
+<p>Dengan perintah sistem, Anda dapat memberikan beberapa konteks kepada model bahasa.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">aiOriginTrial</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">languageModel</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">systemPrompt</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'You are a helpful and friendly assistant.'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-p">});</span>
+<span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">prompt</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'What is the capital of Italy?'</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-c1">// 'The capital of Italy is Rome.'</span>
+</code></pre></devsite-code>
+<h4 data-text="Perintah awal" id="initial_prompts" tabindex="-1">Perintah awal</h4>
+
+<p>Dengan perintah awal, Anda dapat memberikan konteks tentang
+interaksi sebelumnya kepada model bahasa, misalnya, untuk memungkinkan pengguna melanjutkan sesi yang disimpan
+setelah browser dimulai ulang.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">aiOriginTrial</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">languageModel</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">initialPrompts</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">role</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'system'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">content</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'You are a helpful and friendly assistant.'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">role</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'user'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">content</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'What is the capital of Italy?'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">role</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'assistant'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">content</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'The capital of Italy is Rome.'</span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">role</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'user'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">content</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'What language is spoken there?'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">role</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'assistant'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">content</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'The official language of Italy is Italian. [...]'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">]</span>
+<span class="devsite-syntax-p">});</span>
+</code></pre></devsite-code>
+<h4 data-text="Informasi sesi" id="session_information" tabindex="-1">Informasi sesi</h4>
+
+<p>Sesi model bahasa tertentu memiliki jumlah maksimum token yang dapat diproses.
+Anda dapat memeriksa penggunaan dan progres terhadap batas tersebut menggunakan properti berikut di objek sesi:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-sb">`</span><span class="devsite-syntax-si">${</span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">tokensSoFar</span><span class="devsite-syntax-si">}</span><span class="devsite-syntax-sb">/</span><span class="devsite-syntax-si">${</span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">maxTokens</span><span class="devsite-syntax-si">}</span>
+<span class="devsite-syntax-sb">(</span><span class="devsite-syntax-si">${</span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">tokensLeft</span><span class="devsite-syntax-si">}</span><span class="devsite-syntax-sb"> left)`</span><span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code>
+<h4 data-text="Persistensi sesi" id="session_persistence" tabindex="-1">Persistensi sesi</h4>
+
+<p>Setiap sesi melacak konteks percakapan. Interaksi
+sebelumnya diperhitungkan untuk interaksi mendatang hingga jendela konteks
+sesi penuh.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">aiOriginTrial</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">languageModel</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">systemPrompt</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'You are a friendly, helpful assistant specialized in clothing choices.'</span>
+<span class="devsite-syntax-p">});</span>
+
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">result1</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">prompt</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'What should I wear today? It is sunny. I am unsure between a t-shirt and a polo.'</span>
+<span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">result1</span><span class="devsite-syntax-p">);</span>
+
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">result2</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">prompt</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'That sounds great, but oh no, it is actually going to rain! New advice?'</span>
+<span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">result2</span><span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code>
+<h3 data-text="Meng-clone sesi" id="clone_a_session" tabindex="-1">Meng-clone sesi</h3>
+
+<p>Untuk mempertahankan resource, Anda dapat meng-clone sesi yang ada dengan fungsi
+<code dir="ltr" translate="no">clone()</code>. Konteks percakapan direset, tetapi perintah awal atau
+perintah sistem akan tetap utuh. Fungsi <code dir="ltr" translate="no">clone()</code> menggunakan objek opsi
+opsional dengan kolom <code dir="ltr" translate="no">signal</code>, yang memungkinkan Anda meneruskan <code dir="ltr" translate="no">AbortSignal</code> untuk
+menghancurkan sesi yang di-clone.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">controller</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">AbortController</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-nx">stopButton</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onclick</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">controller</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">abort</span><span class="devsite-syntax-p">();</span>
+
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">clonedSession</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">clone</span><span class="devsite-syntax-p">({</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">signal</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">controller</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">signal</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-p">});</span>
+</code></pre></devsite-code>
+<h3 data-text="Meminta model" id="prompt_the_model" tabindex="-1">Meminta model</h3>
+
+<p>Anda dapat meminta model dengan fungsi <code dir="ltr" translate="no">prompt()</code> atau <code dir="ltr" translate="no">promptStreaming()</code>.</p>
+
+<h4 data-text="Output non-streaming" id="non-streaming_output" tabindex="-1">Output non-streaming</h4>
+
+<p>Jika mengharapkan hasil singkat, Anda dapat menggunakan fungsi <code dir="ltr" translate="no">prompt()</code> yang menampilkan
+respons setelah tersedia.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-c1">// Start by checking if it's possible to create a session based on the</span>
+<span class="devsite-syntax-c1">// availability of the model, and the characteristics of the device.</span>
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-nx">available</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">defaultTemperature</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">defaultTopK</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">maxTopK</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">aiOriginTrial</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">languageModel</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">capabilities</span><span class="devsite-syntax-p">();</span>
+
+<span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">available</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">!==</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'no'</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">aiOriginTrial</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">languageModel</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">();</span>
+
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Prompt the model and wait for the whole result to come back.</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">prompt</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'Write me a poem!'</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-p">}</span>
+</code></pre></devsite-code>
+<h4 data-text="Output streaming" id="streaming_output" tabindex="-1">Output streaming</h4>
+
+<p>Jika mengharapkan respons yang lebih lama, Anda harus menggunakan fungsi <code dir="ltr" translate="no">promptStreaming()</code>
+yang memungkinkan Anda menampilkan hasil sebagian saat masuk dari model.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-nx">available</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">defaultTemperature</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">defaultTopK</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">maxTopK</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">aiOriginTrial</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">languageModel</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">capabilities</span><span class="devsite-syntax-p">();</span>
+
+<span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">available</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">!==</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'no'</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">aiOriginTrial</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">languageModel</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">();</span>
+
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Prompt the model and stream the result:</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">stream</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">promptStreaming</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'Write me an extra-long poem!'</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">for</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chunk</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">of</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">stream</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">chunk</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-p">}</span>
+</code></pre></devsite-code>
+<p><code dir="ltr" translate="no">promptStreaming()</code> menampilkan <code dir="ltr" translate="no">ReadableStream</code> yang potongannya secara berurutan disusun
+satu sama lain. Misalnya, <code dir="ltr" translate="no">&quot;Hello,&quot;</code>, <code dir="ltr" translate="no">&quot;Hello world,&quot;</code>, <code dir="ltr" translate="no">&quot;Hello world I am,&quot;</code>,
+<code dir="ltr" translate="no">&quot;Hello world I am an AI.&quot;</code>. Ini bukan perilaku yang dimaksudkan. Kami ingin
+selaras dengan API streaming lainnya di platform, dengan bagian adalah bagian
+berurutan dari satu streaming panjang. Artinya, output akan berupa urutan seperti
+<code dir="ltr" translate="no">&quot;Hello&quot;</code>, <code dir="ltr" translate="no">&quot; world&quot;</code>, <code dir="ltr" translate="no">&quot; I am&quot;</code>, <code dir="ltr" translate="no">&quot; an AI&quot;</code>.</p>
+
+<p>Untuk saat ini, untuk mencapai perilaku yang diinginkan, Anda dapat menerapkan hal berikut. Hal ini
+berfungsi dengan perilaku standar dan non-standar.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">let</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">''</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-kd">let</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">previousChunk</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">''</span><span class="devsite-syntax-p">;</span>
+
+<span class="devsite-syntax-k">for</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chunk</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">of</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">stream</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">newChunk</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chunk</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">startsWith</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">previousChunk</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-o">?</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chunk</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">slice</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">previousChunk</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">length</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chunk</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">newChunk</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">newChunk</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">previousChunk</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chunk</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code>
+<h4 data-text="Menghentikan perintah yang sedang berjalan" id="stop_running_a_prompt" tabindex="-1">Menghentikan perintah yang sedang berjalan</h4>
+
+<p><code dir="ltr" translate="no">prompt()</code> dan <code dir="ltr" translate="no">promptStreaming()</code> menerima parameter kedua opsional dengan
+kolom <code dir="ltr" translate="no">signal</code>, yang memungkinkan Anda berhenti menjalankan perintah.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">controller</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">AbortController</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-nx">stopButton</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onclick</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">controller</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">abort</span><span class="devsite-syntax-p">();</span>
+
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">prompt</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'Write me a poem!'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">signal</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">controller</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">signal</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code>
+<h3 data-text="Menghentikan sesi" id="terminate_a_session" tabindex="-1">Menghentikan sesi</h3>
+
+<p>Panggil <code dir="ltr" translate="no">destroy()</code> untuk mengosongkan resource jika Anda tidak lagi memerlukan sesi. Jika
+dihancurkan, sesi tidak dapat digunakan lagi, dan eksekusi yang sedang berlangsung
+akan dibatalkan. Anda mungkin ingin mempertahankan sesi jika ingin sering meminta
+model karena pembuatan sesi dapat memerlukan waktu.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">prompt</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'You are a friendly, helpful assistant specialized in clothing choices.'</span>
+<span class="devsite-syntax-p">);</span>
+
+<span class="devsite-syntax-nx">session</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">destroy</span><span class="devsite-syntax-p">();</span>
+
+<span class="devsite-syntax-c1">// The promise is rejected with an error explaining that</span>
+<span class="devsite-syntax-c1">// the session is destroyed.</span>
+<span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">prompt</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'What should I wear today? It is sunny and I am unsure</span>
+<span class="devsite-syntax-s1">  between a t-shirt and a polo.'</span>
+<span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code>
+<h2 data-text="Demo" id="demo" tabindex="-1">Demo</h2>
+
+<p>Untuk menguji Prompt API di Ekstensi Chrome, instal ekstensi demo. <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/ai.gemini-on-device">Kode sumber ekstensi</a> tersedia di GitHub.</p>
+
+<p><img alt="Antarmuka demo untuk Prompt API" class="screenshot" src="https://developer.chrome.com/static/docs/extensions/ai/prompt-api/images/demo-screenshot.jpg?hl=id" /></p>
+
+<h2 data-text="Berpartisipasi dan memberikan masukan" id="participate_and_share_feedback" tabindex="-1">Berpartisipasi dan memberikan masukan</h2>
+
+<p>Mulai uji Prompt API sekarang di Ekstensi Chrome Anda dengan bergabung ke
+<a href="https://developer.chrome.com/origintrials?hl=id#/view_trial/320318523496726529" target="_blank">uji coba origin</a>
+dan berikan masukan Anda. Input Anda dapat langsung memengaruhi cara kami mem-build dan
+menerapkan versi mendatang API ini, dan semua API AI bawaan.</p>
+
+<ul>
+<li>Untuk memberikan masukan tentang penerapan Chrome, ajukan <a href="https://issues.chromium.org/issues/new?component=1617227&amp;priority=P2&amp;type=bug&amp;template=0&amp;noWizard=true">laporan bug</a>
+atau <a href="https://issues.chromium.org/issues/new?component=1617227&amp;priority=P2&amp;type=feature_request&amp;template=0&amp;noWizard=true">permintaan
+fitur</a>.
+    *   Berikan masukan Anda tentang bentuk API Prompt API dengan memberikan komentar
+        pada Masalah yang ada atau dengan membuka masalah baru di <a href="https://github.com/explainers-by-googlers/prompt-api/">repositori GitHub
+        Prompt API</a>.</li>
+<li>Lihat <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/ai.gemini-on-device">ekstensi contoh Prompt API di
+GitHub</a>.
+    *   Berpartisipasi dalam upaya standar dengan bergabung ke <a href="https://wicg.io/">Grup Komunitas
+        Inkubator Web</a>.</li>
+</ul>
+
+  
+
+  
+
+  
+</div>
+
+  
+
+  
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+    
+    
+  
+
+  
+  <div class="devsite-floating-action-buttons">
+  
+  
+</div>
+</article>
+
+
+<devsite-content-footer class="nocontent">
+  <p>Kecuali dinyatakan lain, konten di halaman ini dilisensikan berdasarkan <a href="https://creativecommons.org/licenses/by/4.0/">Lisensi Creative Commons Attribution 4.0</a>, sedangkan contoh kode dilisensikan berdasarkan <a href="https://www.apache.org/licenses/LICENSE-2.0">Lisensi Apache 2.0</a>. Untuk mengetahui informasi selengkapnya, lihat <a href="https://developers.google.com/site-policies?hl=id">Kebijakan Situs Google Developers</a>. Java adalah merek dagang terdaftar dari Oracle dan/atau afiliasinya.</p>
+  <p>Terakhir diperbarui pada 2024-11-28 UTC.</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  
+  
+    <template class="devsite-content-data-template">
+      [[["Mudah dipahami","easyToUnderstand","thumb-up"],["Memecahkan masalah saya","solvedMyProblem","thumb-up"],["Lainnya","otherUp","thumb-up"]],[["Informasi yang saya butuhkan tidak ada","missingTheInformationINeed","thumb-down"],["Terlalu rumit/langkahnya terlalu banyak","tooComplicatedTooManySteps","thumb-down"],["Sudah usang","outOfDate","thumb-down"],["Masalah terjemahan","translationIssue","thumb-down"],["Masalah kode / contoh","samplesCodeIssue","thumb-down"],["Lainnya","otherDown","thumb-down"]],["Terakhir diperbarui pada 2024-11-28 UTC."],[],[]]
+    </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent" aria-label="Link footer">
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Beri kontribusi</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://issuetracker.google.com/issues/new?component=1400036&amp;template=1897236"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Laporkan bug
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://issuetracker.google.com/issues?q=status:open%20componentid:1400036&amp;s=created_time:desc"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+              
+              
+            
+          
+            Lihat masalah terbuka
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Konten terkait</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://blog.chromium.org/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Update Chromium
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/case-studies"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Studi kasus
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/deprecated"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Arsip
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://web.dev/shows"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+              
+              
+            
+          
+            Podcast &amp; acara
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Ikuti</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://twitter.com/ChromiumDev"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            @ChromiumDev pada X
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.youtube.com/user/ChromeDevelopers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            YouTube
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.linkedin.com/showcase/chrome-for-developers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Chrome for Developers di LinkedIn
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/static/blog/feed.xml"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+              
+              
+            
+          
+            RSS
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent">
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Link utilitas">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/terms?hl=id"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Persyaratan
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy?hl=id"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privasi
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="nl"
+        >Nederlands</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel></devsite-panel>
+        
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar></devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+      
+        <script type="application/json" analytics>[]</script>
+<script type="application/json" tag-management>{&#34;at&#34;: &#34;True&#34;, &#34;ga4&#34;: [], &#34;ga4p&#34;: [], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-5QF3RT2&#34;, &#34;purpose&#34;: 0}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;True&#34;, &#34;requested&#34;: &#34;id&#34;, &#34;served&#34;: &#34;id&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;AI on Chrome&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;chrome&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    <script nonce="JxlxRUproHCo+ImDVD+fC/zitbAujp">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/js/app_loader.js', '[53,"id",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d","https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome","https://chrome-dot-devsite-v2-prod-3p.appspot.com",1,null,["/_pwa/chrome/manifest.json","https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/images/favicon.png","https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/images/lockup.svg","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,116,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyCNm9YxQumEXwGJgTDjxoxXK6m1F-9720Q","AIzaSyCc76DZePGtoyUjqKrLdsMGk_ry7sljLbY","developer.chrome.com","AIzaSyB9bqgQ2t11WJsOX8qNsCQ6U-w91mmqF-I","AIzaSyAdYnStPdzjcJJtQ0mvIaeaMKj7_t6J_Fg",null,null,null,["Cloud__enable_legacy_calculator_redirect","Search__enable_dynamic_content_confidential_banner","Search__enable_page_map","TpcFeatures__enable_unmirrored_page_left_nav","Profiles__enable_complete_playlist_endpoint","Profiles__enable_page_saving","BookNav__enable_tenant_cache_key","DevPro__enable_developer_subscriptions","Concierge__enable_pushui","MiscFeatureFlags__enable_project_variables","Profiles__enable_completecodelab_endpoint","Profiles__enable_completequiz_endpoint","Search__enable_suggestions_from_borg","Cloud__enable_cloudx_experiment_ids","Profiles__enable_developer_profiles_callout","Analytics__enable_clearcut_logging","Cloud__enable_cloudx_ping","Cloud__enable_free_trial_server_call","OnSwitch__enable","Cloud__enable_cloud_shell","MiscFeatureFlags__enable_view_transitions","EngEduTelemetry__enable_engedu_telemetry","Profiles__enable_recognition_badges","Cloud__enable_cloud_dlp_service","Profiles__enable_profile_collections","Cloud__enable_llm_concierge_chat","CloudShell__cloud_shell_button","TpcFeatures__enable_mirror_tenant_redirects","MiscFeatureFlags__enable_variable_operator","Experiments__reqs_query_experiments","Profiles__enable_public_developer_profiles","Profiles__enable_join_program_group_endpoint","MiscFeatureFlags__enable_firebase_utm","Profiles__enable_awarding_url","Search__enable_ai_eligibility_checks","CloudShell__cloud_code_overflow_menu","Cloud__enable_cloud_facet_chat","MiscFeatureFlags__developers_footer_image","Profiles__enable_release_notes_notifications","MiscFeatureFlags__emergency_css","MiscFeatureFlags__enable_explain_this_code","Profiles__require_profile_eligibility_for_signin","DevPro__enable_cloud_innovators_plus","Cloud__enable_cloud_shell_fte_user_flow","MiscFeatureFlags__developers_footer_dark_image","Profiles__enable_dashboard_curated_recommendations"],null,null,"AIzaSyA58TaKli1DculwmAmbpzLVGuWc8eCQgQc","https://developerscontentserving-pa.googleapis.com","AIzaSyDWBU60w0P9hEkr29kkksYs8Z7gvZ8u_wc","https://developerscontentsearch-pa.googleapis.com",2,4,null,"https://developerprofiles-pa.googleapis.com",[53,"chrome","Chrome for Developers","developer.chrome.com",null,"chrome-dot-devsite-v2-prod-3p.appspot.com",null,null,[null,null,null,null,null,null,null,null,null,null,null,[1],null,null,null,null,null,null,[1],null,null,null,null,[1,null,1],[1,1,null,1,1]],null,[69,null,null,null,null,null,"/images/lockup.svg","/images/touchicon-180.png",null,null,null,1,1,null,null,null,null,null,null,null,null,2,null,null,null,"/images/lockup-dark-theme.svg",[]],[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[[],[1,1]],[[null,null,null,null,null,["GTM-5QF3RT2"],null,null,null,null,null,[["GTM-5QF3RT2",1]],1]],null,4]]')
+  
+</script>
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>

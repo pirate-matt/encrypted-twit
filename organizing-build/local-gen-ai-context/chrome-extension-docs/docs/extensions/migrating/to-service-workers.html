@@ -1,0 +1,5212 @@
+<!doctype html>
+<html 
+      lang="id-x-mtfrom-en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="157101835696-ooapojlodmuabs2do2vuhhnf90bccmoi.apps.googleusercontent.com">
+    <meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award">
+    <meta property="og:site_name" content="Chrome for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#1a73e8"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/chrome/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//apis.google.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/css/app.css">
+      
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/images/touchicon-180.png"><link rel="canonical" href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=id"><link rel="search" type="application/opensearchdescription+xml"
+            title="Chrome for Developers" href="https://developer.chrome.com/s/opensearch.xml?hl=id">
+      <link rel="alternate" hreflang="en"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers" /><link rel="alternate" hreflang="x-default" href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers" /><link rel="alternate" hreflang="ar"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=zh-tw" /><link rel="alternate" hreflang="nl"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=nl" /><link rel="alternate" hreflang="fa"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=ru" /><link rel="alternate" hreflang="es-419"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=vi" /><link rel="alternate" hreflang="en-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers" /><link rel="alternate" hreflang="x-default" href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers" /><link rel="alternate" hreflang="ar-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=ar" /><link rel="alternate" hreflang="bn-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=bn" /><link rel="alternate" hreflang="zh-Hans-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=zh-tw" /><link rel="alternate" hreflang="nl-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=nl" /><link rel="alternate" hreflang="fa-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=fa" /><link rel="alternate" hreflang="fr-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=fr" /><link rel="alternate" hreflang="de-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=de" /><link rel="alternate" hreflang="he-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=he" /><link rel="alternate" hreflang="hi-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=hi" /><link rel="alternate" hreflang="id-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=id" /><link rel="alternate" hreflang="it-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=it" /><link rel="alternate" hreflang="ja-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=ja" /><link rel="alternate" hreflang="ko-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=ko" /><link rel="alternate" hreflang="pl-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=pl" /><link rel="alternate" hreflang="pt-BR-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=pt-br" /><link rel="alternate" hreflang="ru-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=ru" /><link rel="alternate" hreflang="es-419-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=es-419" /><link rel="alternate" hreflang="th-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=th" /><link rel="alternate" hreflang="tr-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=tr" /><link rel="alternate" hreflang="vi-cn"
+          href="https://developer.chrome.google.cn/docs/extensions/develop/migrate/to-service-workers?hl=vi" /><title>Bermigrasi ke pekerja layanan &nbsp;|&nbsp; Chrome Extensions &nbsp;|&nbsp; Chrome for Developers</title>
+
+<meta property="og:title" content="Bermigrasi ke pekerja layanan &nbsp;|&nbsp; Chrome Extensions &nbsp;|&nbsp; Chrome for Developers"><meta name="description" content="Pekerja layanan memungkinkan ekstensi berjalan hanya saat diperlukan, sehingga menghemat resource.">
+  <meta property="og:description" content="Pekerja layanan memungkinkan ekstensi berjalan hanya saat diperlukan, sehingga menghemat resource."><meta property="og:url" content="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=id"><meta property="og:locale" content="id"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "dateModified": "2023-03-09",
+    "headline": "Bermigrasi ke pekerja layanan"
+  }
+</script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Docs",
+      "item": "https://developer.chrome.com/docs"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Chrome Extensions",
+      "item": "https://developer.chrome.com/docs/extensions"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Bermigrasi ke pekerja layanan",
+      "item": "https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers"
+    }]
+  }
+  </script><link rel="alternate machine-translated-from" hreflang="en"
+        href="https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers?hl=en">
+  
+
+  
+
+  
+
+  
+
+  
+
+
+    
+      <link rel="stylesheet" href="/extras.css"></head>
+  <body class=""
+        template="page"
+        theme="chrome-theme"
+        type="article"
+        
+        
+        appearance
+        layout="docs"
+        
+        
+        
+        
+        display-toc
+        pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+    <section class="devsite-wrapper">
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar><devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner nocontent">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Buka menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="chromeForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme"
+            alt="Chrome for Developers">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/images/lockup.svg" class="devsite-site-logo" alt="Chrome for Developers">
+  </picture>
+  
+</a>
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Tab atas">
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/case-studies?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/case-studies?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - dapatkan inspirasi"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Dapatkan inspirasi"
+         
+           track-name="dapatkan inspirasi"
+         
+       >
+    Dapatkan inspirasi
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/blog?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/blog?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - blog"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Blog"
+         
+           track-name="blog"
+         
+       >
+    Blog
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab class="devsite-dropdown
+    devsite-dropdown-full
+    devsite-active
+    
+    ">
+  
+    <a href="https://developer.chrome.com/docs?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/docs?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - dokumen"
+       track-metadata-module="primary nav"
+       aria-label="Dokumen, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Dokumen"
+         
+           track-name="dokumen"
+         
+       >
+    Dokumen
+  
+    </a>
+  
+  
+    <a href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false"
+       aria-label="Menu dropdown untuk Dokumen"
+       track-type="nav"
+       track-metadata-eventdetail="https://developer.chrome.com/docs?hl=id"
+       track-metadata-position="nav - dokumen"
+       track-metadata-module="primary nav"
+       
+        
+          data-category="Site-Wide Custom Events"
+        
+          data-label="Tab: Dokumen"
+        
+          track-name="dokumen"
+        
+      
+       class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+  
+  <div class="devsite-tabs-dropdown" role="menu" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       build-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Membangun dengan Chrome</li>
+              
+              
+                <li class="devsite-nav-description">Pelajari cara kerja Chrome, berpartisipasilah dalam uji coba origin, dan bangun aplikasi dengan Chrome di mana saja.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/web-platform?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/web-platform?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="membangun dengan chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Platform Web
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/capabilities?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/capabilities?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="membangun dengan chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Kemampuan
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/chromedriver?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/chromedriver?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="membangun dengan chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      ChromeDriver
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/extensions?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/extensions?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="membangun dengan chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Extensions
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/webstore?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/webstore?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="membangun dengan chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chrome Web Store
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/chromium?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/chromium?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="membangun dengan chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chromium
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/aurora?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/aurora?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="membangun dengan chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Aurora
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/android?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/android?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="membangun dengan chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Web di Android
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/origintrials/?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/origintrials/?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="membangun dengan chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Uji coba origin
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/release-notes?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/release-notes?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="membangun dengan chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Catatan rilis
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       productivity-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Produktivitas</li>
+              
+              
+                <li class="devsite-nav-description">Ciptakan pengalaman terbaik untuk pengguna Anda dengan alat terbaik di web.</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/devtools?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/devtools?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="produktivitas"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      DevTools
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/lighthouse?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/lighthouse?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="produktivitas"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Mercusuar
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/crux?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/crux?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="produktivitas"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Laporan UX Chrome
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/accessibility?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/accessibility?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="produktivitas"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Aksesibilitas
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       dcc-subnav second-column-list">
+              
+              
+                <li class="devsite-nav-description">Selesaikan berbagai hal lebih cepat dan lebih rapi dengan library siap pakai kami.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/workbox?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/workbox?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="produktivitas"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Workbox
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/puppeteer?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/puppeteer?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="produktivitas"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Boneka
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       experience-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Pengalaman</li>
+              
+              
+                <li class="devsite-nav-description">Desain web yang menarik dan berperforma tinggi dengan Chrome.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/ai?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/ai?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="pengalaman"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      AI
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/performance?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/performance?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="pengalaman"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Performa
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/css-ui?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/css-ui?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="pengalaman"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      CSS dan UI
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/identity?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/identity?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="pengalaman"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Identitas
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/payments?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/payments?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="pengalaman"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Pembayaran
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/privacy-security?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/privacy-security?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="pengalaman"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Privasi dan keamanan
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       resources-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Referensi</li>
+              
+              
+                <li class="devsite-nav-description">Lainnya dari tim Chrome.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="referensi"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Semua dokumentasi
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/baseline?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/baseline?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="referensi"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Dasar pengukuran
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="referensi"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      web.dev
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://pagespeed.web.dev?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://pagespeed.web.dev?hl=id"
+                     track-metadata-position="nav - dokumen"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="referensi"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Audit PageSpeed Insights
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/new?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/new?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - baru di chrome"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Baru di Chrome"
+         
+           track-name="baru di chrome"
+         
+       >
+    Baru di Chrome
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    
+    project-name="Chrome Extensions"
+    tenant-name="Chrome for Developers"
+    
+    
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://developer.chrome.com/s/results?hl=id" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Buka penelusuran"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Penelusuran"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Penelusuran"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+          </div>
+          <div class="devsite-search-shortcut-icon-container" aria-hidden="true">
+            <kbd class="devsite-search-shortcut-icon">/</kbd>
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Tutup penelusuran"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+        
+
+        <devsite-appearance-selector></devsite-appearance-selector>
+
+        
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="nl"
+        >Nederlands</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+        
+
+        
+          
+          
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Masuk</span>
+            
+        </devsite-user>
+           
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+                  
+                  
+                  <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs/extensions?hl=id"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Lower Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Chrome Extensions"
+      
+    >
+    
+        Chrome Extensions
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+                
+              
+              
+            </div>
+            
+          </div>
+          
+        
+      
+      
+        <div class="devsite-doc-set-nav-row">
+          
+          
+            
+            
+  <devsite-tabs class="lower-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Tab bawah">
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/docs/extensions?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/extensions?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - ringkasan"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Ringkasan"
+         
+           track-name="ringkasan"
+         
+       >
+    Ringkasan
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/docs/extensions/get-started?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/extensions/get-started?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - mulai"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Mulai"
+         
+           track-name="mulai"
+         
+       >
+    Mulai
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/docs/extensions/develop?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/extensions/develop?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - mengembangkan aplikasi"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Mengembangkan aplikasi"
+         
+           track-name="mengembangkan aplikasi"
+         
+       >
+    Mengembangkan aplikasi
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/docs/extensions/how-to?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/extensions/how-to?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - petunjuk"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Petunjuk"
+         
+           track-name="petunjuk"
+         
+       >
+    Petunjuk
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  class="devsite-active">
+            
+    <a href="https://developer.chrome.com/docs/extensions/ai?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/extensions/ai?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - ai"
+       track-metadata-module="primary nav"
+       aria-label="AI, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: AI"
+         
+           track-name="ai"
+         
+       >
+    AI
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab class="devsite-dropdown
+    
+    
+    
+    ">
+  
+    <a href="https://developer.chrome.com/docs/extensions/reference?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/extensions/reference?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - referensi"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Referensi"
+         
+           track-name="referensi"
+         
+       >
+    Referensi
+  
+    </a>
+  
+  
+    <a href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false"
+       aria-label="Menu dropdown untuk Referensi"
+       track-type="nav"
+       track-metadata-eventdetail="https://developer.chrome.com/docs/extensions/reference?hl=id"
+       track-metadata-position="nav - referensi"
+       track-metadata-module="primary nav"
+       
+        
+          data-category="Site-Wide Custom Events"
+        
+          data-label="Tab: Referensi"
+        
+          track-name="referensi"
+        
+      
+       class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+  
+  <div class="devsite-tabs-dropdown" role="menu" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/extensions/reference/api?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/extensions/reference/api?hl=id"
+                     track-metadata-position="nav - referensi"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      API
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/extensions/reference/permissions-list?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/extensions/reference/permissions-list?hl=id"
+                     track-metadata-position="nav - referensi"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Izin
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/extensions/reference/manifest?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/extensions/reference/manifest?hl=id"
+                     track-metadata-position="nav - referensi"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Manifes
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/docs/extensions/samples?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/extensions/samples?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - contoh"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Contoh"
+         
+           track-name="contoh"
+         
+       >
+    Contoh
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab class="devsite-dropdown
+    
+    
+    
+    ">
+  
+    <a href="https://developer.chrome.com/docs/webstore?hl=id"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/webstore?hl=id"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - chrome web store"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Chrome Web Store"
+         
+           track-name="chrome web store"
+         
+       >
+    Chrome Web Store
+  
+    </a>
+  
+  
+    <a href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false"
+       aria-label="Menu dropdown untuk Chrome Web Store"
+       track-type="nav"
+       track-metadata-eventdetail="https://developer.chrome.com/docs/webstore?hl=id"
+       track-metadata-position="nav - chrome web store"
+       track-metadata-module="primary nav"
+       
+        
+          data-category="Site-Wide Custom Events"
+        
+          data-label="Tab: Chrome Web Store"
+        
+          track-name="chrome web store"
+        
+      
+       class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+  
+  <div class="devsite-tabs-dropdown" role="menu" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/webstore/prepare?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/webstore/prepare?hl=id"
+                     track-metadata-position="nav - chrome web store"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Menyiapkan Ekstensi
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/webstore/publish?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/webstore/publish?hl=id"
+                     track-metadata-position="nav - chrome web store"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Publikasikan di Chrome Web Store
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/webstore/program-policies?hl=id"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/webstore/program-policies?hl=id"
+                     track-metadata-position="nav - chrome web store"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Kebijakan Program
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+          
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+
+  
+</devsite-header>
+      <devsite-book-nav scrollbars >
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     >
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Ketik untuk memfilter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Hapus filter"
+        aria-label="Hapus filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent"
+     aria-label="Menu samping">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Tutup navigasi">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="chromeForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme"
+            alt="Chrome for Developers">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/images/lockup.svg" class="devsite-site-logo" alt="Chrome for Developers">
+  </picture>
+  
+</a>
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/case-studies"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Dapatkan inspirasi"
+      
+        track-name="dapatkan inspirasi"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Dapatkan inspirasi"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Dapatkan inspirasi
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/blog"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Blog"
+      
+        track-name="blog"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Blog"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Blog
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Dokumen"
+      
+        track-name="dokumen"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Dokumen"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Dokumen
+   </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Dokumen"
+      
+        track-name="dokumen"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Dokumen">
+      Lainnya
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Dokumen">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+                <ul class="devsite-nav-responsive-tabs">
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/extensions"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Ringkasan"
+      
+        track-name="ringkasan"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Ringkasan"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Ringkasan
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/extensions/get-started"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Mulai"
+      
+        track-name="mulai"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Mulai"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Mulai
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/extensions/develop"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Mengembangkan aplikasi"
+      
+        track-name="mengembangkan aplikasi"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Mengembangkan aplikasi"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Mengembangkan aplikasi
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/extensions/how-to"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Petunjuk"
+      
+        track-name="petunjuk"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Petunjuk"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Petunjuk
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/extensions/ai"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: AI"
+      
+        track-name="ai"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: AI"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip menu="_book">
+      AI
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/extensions/reference"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Referensi"
+      
+        track-name="referensi"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Referensi"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Referensi
+   </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+                devsite-lower-tab-item">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Referensi"
+      
+        track-name="referensi"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Referensi">
+      Lainnya
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Referensi">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/extensions/samples"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Contoh"
+      
+        track-name="contoh"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Contoh"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Contoh
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/webstore"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Chrome Web Store"
+      
+        track-name="chrome web store"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome Web Store"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chrome Web Store
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+                devsite-lower-tab-item">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Chrome Web Store"
+      
+        track-name="chrome web store"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Chrome Web Store">
+      Lainnya
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Chrome Web Store">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/new"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Baru di Chrome"
+      
+        track-name="baru di chrome"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Baru di Chrome"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Baru di Chrome
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item"><a href="/docs/extensions/whats-new"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/whats-new"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/whats-new"
+      ><span class="devsite-nav-text" tooltip>Yang baru di Ekstensi Chrome</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/extensions/samples"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/samples"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/samples"
+      ><span class="devsite-nav-text" tooltip>Contoh</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Mulai</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/extensions/get-started"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/get-started"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/get-started"
+      ><span class="devsite-nav-text" tooltip>Pengantar</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/get-started/tutorial/hello-world"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/get-started/tutorial/hello-world"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/get-started/tutorial/hello-world"
+      ><span class="devsite-nav-text" tooltip>Halo Dunia</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/get-started/tutorial/scripts-on-every-tab"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/get-started/tutorial/scripts-on-every-tab"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/get-started/tutorial/scripts-on-every-tab"
+      ><span class="devsite-nav-text" tooltip>Jalankan skrip di setiap halaman</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/get-started/tutorial/scripts-activetab"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/get-started/tutorial/scripts-activetab"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/get-started/tutorial/scripts-activetab"
+      ><span class="devsite-nav-text" tooltip>Memasukkan skrip ke tab aktif</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/get-started/tutorial/service-worker-events"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/get-started/tutorial/service-worker-events"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/get-started/tutorial/service-worker-events"
+      ><span class="devsite-nav-text" tooltip>Menangani peristiwa dengan pekerja layanan</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/get-started/tutorial/popup-tabs-manager"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/get-started/tutorial/popup-tabs-manager"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/get-started/tutorial/popup-tabs-manager"
+      ><span class="devsite-nav-text" tooltip>Kelola tab</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/get-started/tutorial/debug"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/get-started/tutorial/debug"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/get-started/tutorial/debug"
+      ><span class="devsite-nav-text" tooltip>Men-debug ekstensi</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Mengembangkan aplikasi</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/extensions/develop"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop"
+      ><span class="devsite-nav-text" tooltip>Pengantar</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Mendesain antarmuka pengguna</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/extensions/develop/ui"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/ui"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/ui"
+      ><span class="devsite-nav-text" tooltip>Komponen antarmuka pengguna</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/ui/add-popup"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/ui/add-popup"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/ui/add-popup"
+      ><span class="devsite-nav-text" tooltip>Menambahkan pop-up</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/ui/implement-action"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/ui/implement-action"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/ui/implement-action"
+      ><span class="devsite-nav-text" tooltip>Mengimplementasikan tindakan</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/ui/context-menu"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/ui/context-menu"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/ui/context-menu"
+      ><span class="devsite-nav-text" tooltip>Membangun menu konteks</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/ui/override-chrome-pages"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/ui/override-chrome-pages"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/ui/override-chrome-pages"
+      ><span class="devsite-nav-text" tooltip>Mengganti halaman Chrome</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/ui/omnibox-triggers"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/ui/omnibox-triggers"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/ui/omnibox-triggers"
+      ><span class="devsite-nav-text" tooltip>Memicu tindakan dari omnibox</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/ui/options-page"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/ui/options-page"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/ui/options-page"
+      ><span class="devsite-nav-text" tooltip>Berikan opsi kepada pengguna</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/ui/notify-users"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/ui/notify-users"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/ui/notify-users"
+      ><span class="devsite-nav-text" tooltip>Beri tahu pengguna</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/ui/respond-to-commands"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/ui/respond-to-commands"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/ui/respond-to-commands"
+      ><span class="devsite-nav-text" tooltip>Merespons perintah</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/ui/themes"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/ui/themes"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/ui/themes"
+      ><span class="devsite-nav-text" tooltip>Apa itu tema?</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/ui/configure-icons"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/ui/configure-icons"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/ui/configure-icons"
+      ><span class="devsite-nav-text" tooltip>Mengonfigurasi ikon ekstensi</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/ui/a11y"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/ui/a11y"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/ui/a11y"
+      ><span class="devsite-nav-text" tooltip>Buat ekstensi Anda dapat diakses</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/ui/i18n"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/ui/i18n"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/ui/i18n"
+      ><span class="devsite-nav-text" tooltip>Menginternasionalkan antarmuka</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Konsep inti</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/extensions/develop/concepts/content-scripts"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/concepts/content-scripts"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/concepts/content-scripts"
+      ><span class="devsite-nav-text" tooltip>Skrip konten</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/concepts/messaging"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/concepts/messaging"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/concepts/messaging"
+      ><span class="devsite-nav-text" tooltip>Pesan yang diteruskan</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/concepts/match-patterns"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/concepts/match-patterns"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/concepts/match-patterns"
+      ><span class="devsite-nav-text" tooltip>Pola pencocokan</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/concepts/storage-and-cookies"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/concepts/storage-and-cookies"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/concepts/storage-and-cookies"
+      ><span class="devsite-nav-text" tooltip>Penyimpanan dan cookie</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/concepts/content-filtering"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/concepts/content-filtering"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/concepts/content-filtering"
+      ><span class="devsite-nav-text" tooltip>Pemfilteran konten</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/concepts/activeTab"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/concepts/activeTab"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/concepts/activeTab"
+      ><span class="devsite-nav-text" tooltip>Izin activeTab</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/concepts/declare-permissions"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/concepts/declare-permissions"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/concepts/declare-permissions"
+      ><span class="devsite-nav-text" tooltip>Mendeklarasikan izin</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/concepts/permission-warnings"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/concepts/permission-warnings"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/concepts/permission-warnings"
+      ><span class="devsite-nav-text" tooltip>Panduan peringatan izin</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/concepts/native-messaging"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/concepts/native-messaging"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/concepts/native-messaging"
+      ><span class="devsite-nav-text" tooltip>Pesan native</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/concepts/network-requests"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/concepts/network-requests"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/concepts/network-requests"
+      ><span class="devsite-nav-text" tooltip>Permintaan jaringan lintas origin</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/concepts/cross-origin-isolation"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/concepts/cross-origin-isolation"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/concepts/cross-origin-isolation"
+      ><span class="devsite-nav-text" tooltip>Isolasi lintas asal</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/concepts/service-workers"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/concepts/service-workers"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/concepts/service-workers"
+      ><span class="devsite-nav-text" tooltip>Pengantar pekerja layanan</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/concepts/service-workers/basics"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/concepts/service-workers/basics"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/concepts/service-workers/basics"
+      ><span class="devsite-nav-text" tooltip>Dasar-dasar pekerja layanan ekstensi</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/concepts/service-workers/lifecycle"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/concepts/service-workers/lifecycle"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/concepts/service-workers/lifecycle"
+      ><span class="devsite-nav-text" tooltip>Siklus proses pekerja layanan ekstensi</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/concepts/service-workers/events"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/concepts/service-workers/events"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/concepts/service-workers/events"
+      ><span class="devsite-nav-text" tooltip>Peristiwa di pekerja layanan</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/concepts/real-time"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/concepts/real-time"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/concepts/real-time"
+      ><span class="devsite-nav-text" tooltip>Update Real Time</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Bermigrasi ke Manifes V3</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/extensions/develop/migrate/what-is-mv3"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/migrate/what-is-mv3"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/migrate/what-is-mv3"
+      ><span class="devsite-nav-text" tooltip>Apa itu Manifes V3</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/migrate/mv2-deprecation-timeline"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/migrate/mv2-deprecation-timeline"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/migrate/mv2-deprecation-timeline"
+      ><span class="devsite-nav-text" tooltip>Linimasa dukungan Manifes V2</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/migrate/known-issues"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/migrate/known-issues"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/migrate/known-issues"
+      ><span class="devsite-nav-text" tooltip>Masalah umum saat bermigrasi ke Manifes V3</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/migrate"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/migrate"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/migrate"
+      ><span class="devsite-nav-text" tooltip>Ringkasan migrasi</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/migrate/checklist"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/migrate/checklist"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/migrate/checklist"
+      ><span class="devsite-nav-text" tooltip>Checklist migrasi Manifes V3</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/migrate/manifest"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/migrate/manifest"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/migrate/manifest"
+      ><span class="devsite-nav-text" tooltip>Mengupdate manifes</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/migrate/to-service-workers"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/migrate/to-service-workers"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/migrate/to-service-workers"
+      ><span class="devsite-nav-text" tooltip>Bermigrasi ke pekerja layanan</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/migrate/api-calls"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/migrate/api-calls"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/migrate/api-calls"
+      ><span class="devsite-nav-text" tooltip>Mengupdate kode</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/migrate/blocking-web-requests"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/migrate/blocking-web-requests"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/migrate/blocking-web-requests"
+      ><span class="devsite-nav-text" tooltip>Ganti pemroses permintaan web pemblokiran</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/migrate/improve-security"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/migrate/improve-security"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/migrate/improve-security"
+      ><span class="devsite-nav-text" tooltip>Meningkatkan keamanan ekstensi</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/migrate/remote-hosted-code"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/migrate/remote-hosted-code"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/migrate/remote-hosted-code"
+      ><span class="devsite-nav-text" tooltip>Menangani pelanggaran kode yang dihosting dari jarak jauh</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/migrate/publish-mv3"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/migrate/publish-mv3"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/migrate/publish-mv3"
+      ><span class="devsite-nav-text" tooltip>Memublikasikan ekstensi</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Keamanan dan privasi</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/extensions/develop/security-privacy/stay-secure"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/security-privacy/stay-secure"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/security-privacy/stay-secure"
+      ><span class="devsite-nav-text" tooltip>Tetap aman</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/develop/security-privacy/user-privacy"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/develop/security-privacy/user-privacy"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/develop/security-privacy/user-privacy"
+      ><span class="devsite-nav-text" tooltip>Lindungi privasi pengguna</span></a></li></ul></div></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Petunjuk</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/extensions/how-to"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to"
+      ><span class="devsite-nav-text" tooltip>Pengantar</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Mendesain antarmuka pengguna</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/extensions/how-to/ui/localization-message-formats"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/ui/localization-message-formats"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/ui/localization-message-formats"
+      ><span class="devsite-nav-text" tooltip>Format pesan pelokalan</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/how-to/ui/favicons"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/ui/favicons"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/ui/favicons"
+      ><span class="devsite-nav-text" tooltip>Menggunakan favicon</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/how-to/ui/a11y"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/ui/a11y"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/ui/a11y"
+      ><span class="devsite-nav-text" tooltip>Mendukung aksesibilitas</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/how-to/ui/notifications"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/ui/notifications"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/ui/notifications"
+      ><span class="devsite-nav-text" tooltip>Menggunakan Notifications API</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/how-to/devtools/extend-devtools"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/devtools/extend-devtools"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/devtools/extend-devtools"
+      ><span class="devsite-nav-text" tooltip>Memperluas DevTools</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Mengintegrasikan</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/extensions/how-to/integrate/google-analytics-4"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/integrate/google-analytics-4"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/integrate/google-analytics-4"
+      ><span class="devsite-nav-text" tooltip>Menggunakan Google Analytics 4</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/how-to/integrate/oauth"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/integrate/oauth"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/integrate/oauth"
+      ><span class="devsite-nav-text" tooltip>Menggunakan OAuth 2.0 untuk mengautentikasi pengguna dengan Google</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/how-to/integrate/chrome.gcm"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/integrate/chrome.gcm"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/integrate/chrome.gcm"
+      ><span class="devsite-nav-text" tooltip>Menggunakan Firebase Cloud Messaging (FCM) dengan chrome.gcm</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/how-to/integrate/web-push"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/integrate/web-push"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/integrate/web-push"
+      ><span class="devsite-nav-text" tooltip>Menerima pesan dari server Anda menggunakan Push API</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Menggunakan platform web</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/extensions/how-to/web-platform/websockets"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/web-platform/websockets"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/web-platform/websockets"
+      ><span class="devsite-nav-text" tooltip>Menggunakan WebSocket di pekerja layanan</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/how-to/web-platform/file-handling-chromeos"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/web-platform/file-handling-chromeos"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/web-platform/file-handling-chromeos"
+      ><span class="devsite-nav-text" tooltip>Penanganan file di ChromeOS</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/how-to/web-platform/screen-capture"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/web-platform/screen-capture"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/web-platform/screen-capture"
+      ><span class="devsite-nav-text" tooltip>Perekaman audio dan screenshot</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/how-to/web-platform/geolocation"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/web-platform/geolocation"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/web-platform/geolocation"
+      ><span class="devsite-nav-text" tooltip>Gunakan geolokasi</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/how-to/web-platform/webhid"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/web-platform/webhid"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/web-platform/webhid"
+      ><span class="devsite-nav-text" tooltip>Gunakan WebHID</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/how-to/web-platform/webusb"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/web-platform/webusb"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/web-platform/webusb"
+      ><span class="devsite-nav-text" tooltip>Menggunakan WebUSB</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Menguji dan memproses debug</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/extensions/how-to/test/end-to-end-testing"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/test/end-to-end-testing"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/test/end-to-end-testing"
+      ><span class="devsite-nav-text" tooltip>Pengujian menyeluruh untuk Ekstensi Chrome</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/how-to/test/puppeteer"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/test/puppeteer"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/test/puppeteer"
+      ><span class="devsite-nav-text" tooltip>Menguji Ekstensi Chrome dengan Puppeteer</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/how-to/test/test-serviceworker-termination-with-puppeteer"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/test/test-serviceworker-termination-with-puppeteer"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/test/test-serviceworker-termination-with-puppeteer"
+      ><span class="devsite-nav-text" tooltip>Menguji penghentian pekerja layanan dengan Puppeteer</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/how-to/test/unit-testing"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/test/unit-testing"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/test/unit-testing"
+      ><span class="devsite-nav-text" tooltip>Pengujian unit Ekstensi Chrome</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Distribusikan ekstensi</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/extensions/how-to/distribute"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/distribute"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/distribute"
+      ><span class="devsite-nav-text" tooltip>Pengantar</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/how-to/distribute/install-extensions"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/distribute/install-extensions"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/distribute/install-extensions"
+      ><span class="devsite-nav-text" tooltip>Menggunakan metode penginstalan alternatif</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/how-to/distribute/host-on-linux"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/distribute/host-on-linux"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/distribute/host-on-linux"
+      ><span class="devsite-nav-text" tooltip>Hosting mandiri untuk Linux</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Tetap aman</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/extensions/how-to/security/sandboxing-eval"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/how-to/security/sandboxing-eval"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/how-to/security/sandboxing-eval"
+      ><span class="devsite-nav-text" tooltip>Menggunakan eval() di iframe dalam sandbox</span></a></li></ul></div></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-accordion"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Dukungan dan masukan</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/extensions/support"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/support"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/support"
+      ><span class="devsite-nav-text" tooltip>Dukungan dan masukan</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/support/file-a-bug"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/support/file-a-bug"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/support/file-a-bug"
+      ><span class="devsite-nav-text" tooltip>Laporkan bug ekstensi</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/support/find-a-bug"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/support/find-a-bug"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/support/find-a-bug"
+      ><span class="devsite-nav-text" tooltip>Menemukan dan mengikuti bug</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/support/get-help"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/support/get-help"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/support/get-help"
+      ><span class="devsite-nav-text" tooltip>Mendapatkan bantuan terkait Ekstensi Chrome</span></a></li><li class="devsite-nav-item"><a href="/docs/extensions/support/request-feature"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/extensions/support/request-feature"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/extensions/support/request-feature"
+      ><span class="devsite-nav-text" tooltip>Kirim permintaan fitur</span></a></li></ul></div></li>
+          </ul>
+        
+        
+          
+    
+  
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Dokumen"
+          aria-label="Menu samping" hidden>
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Membangun dengan Chrome
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/web-platform"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Platform Web"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Platform Web
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/capabilities"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Kemampuan"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Kemampuan
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/chromedriver"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ChromeDriver"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ChromeDriver
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/extensions"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Extensions"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Extensions
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/webstore"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome Web Store"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chrome Web Store
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/chromium"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chromium"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chromium
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/aurora"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Aurora"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Aurora
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/android"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Web di Android"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Web di Android
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developer.chrome.com/origintrials/"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Uji coba origin"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Uji coba origin
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/release-notes"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Catatan rilis"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Catatan rilis
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Produktivitas
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/devtools"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: DevTools"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      DevTools
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/lighthouse"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Mercusuar"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Mercusuar
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/crux"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Laporan UX Chrome"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Laporan UX Chrome
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/accessibility"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Aksesibilitas"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Aksesibilitas
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/workbox"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Workbox"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Workbox
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/puppeteer"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Boneka"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Boneka
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Pengalaman
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/ai"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: AI"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      AI
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/performance"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Performa"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Performa
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/css-ui"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: CSS dan UI"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      CSS dan UI
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/identity"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Identitas"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Identitas
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/payments"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Pembayaran"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Pembayaran
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/privacy-security"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Privasi dan keamanan"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Privasi dan keamanan
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Referensi
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Semua dokumentasi"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Semua dokumentasi
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://web.dev/baseline"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Dasar pengukuran"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Dasar pengukuran
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://web.dev"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: web.dev"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      web.dev
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://pagespeed.web.dev"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Audit PageSpeed Insights"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Audit PageSpeed Insights
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+  
+        
+        
+          
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Referensi"
+          aria-label="Menu samping" hidden>
+        
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/extensions/reference/api"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: API"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      API
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/extensions/reference/permissions-list"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Izin"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Izin
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/extensions/reference/manifest"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Manifes"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Manifes
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Chrome Web Store"
+          aria-label="Menu samping" hidden>
+        
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/webstore/prepare"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Menyiapkan Ekstensi"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Menyiapkan Ekstensi
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/webstore/publish"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Publikasikan di Chrome Web Store"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Publikasikan di Chrome Web Store
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/webstore/program-policies"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Kebijakan Program"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Kebijakan Program
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+        
+      </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            
+              has-book-nav
+              has-sidebar
+            >
+          
+          
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="Pada halaman ini"
+                            depth="2"
+                            scrollbars
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav">
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+  
+  
+    <div class="devsite-banner devsite-banner-translated nocontent">
+      <div class="devsite-banner-message">
+        <div class="devsite-banner-message-text">
+          <img src="https://developer.chrome.com/_static/images/translated.svg?hl=id"
+               class="devsite-banner-translated-image invert"
+               alt="">
+          <span class="devsite-banner-translated-text">
+            
+            Halaman ini diterjemahkan oleh <a href="//cloud.google.com/translate/?hl=id">Cloud Translation API</a>.
+          </span>
+        </div>
+        <devsite-switch-to-english-button></devsite-switch-to-english-button>
+      </div>
+    </div>
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation">
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/?hl=id"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        Beranda
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs?hl=id"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail="Docs"
+      
+    >
+    
+        Docs
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs/extensions?hl=id"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail="Chrome Extensions"
+      
+    >
+    
+        Chrome Extensions
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs/extensions/ai?hl=id"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="4"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="4"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        AI
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+    <h1 class="devsite-page-title" tabindex="-1">
+      Bermigrasi ke pekerja layanan
+      
+    </h1>
+  <devsite-feature-tooltip
+      ack-key="AckCollectionsBookmarkTooltipDismiss"
+      analytics-category="Site-Wide Custom Events"
+      analytics-action-show="Callout Profile displayed"
+      analytics-action-close="Callout Profile dismissed"
+      analytics-label="Create Collection Callout"
+      class="devsite-page-bookmark-tooltip nocontent"
+      dismiss-button="true"
+      id="devsite-collections-dropdown"
+      
+      dismiss-button-text="Tutup"
+
+      
+      close-button-text="Oke">
+
+    
+    <devsite-bookmark></devsite-bookmark>
+
+    <span slot="popout-heading">
+      
+      Tetap teratur dengan koleksi
+    </span>
+    <span slot="popout-contents">
+      
+      Simpan dan kategorikan konten berdasarkan preferensi Anda.
+    </span>
+  </devsite-feature-tooltip>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  
+    
+  
+
+  
+
+
+
+
+
+
+<div class="devsite-article-body clearfix
+  ">
+
+  
+    
+    
+
+
+
+
+<p>Mengganti halaman latar belakang atau peristiwa dengan pekerja layanan</p>
+
+<aside class="note"><b>Catatan:</b> Manifes V3 umumnya didukung di Chrome 88 atau yang lebih baru. Untuk fitur ekstensi yang ditambahkan di versi Chrome yang lebih baru, lihat <a href="https://developer.chrome.com/docs/extensions/reference?hl=id">dokumentasi referensi API</a> untuk informasi dukungan. Jika ekstensi memerlukan API tertentu, Anda dapat menentukan <a href="https://developer.chrome.com/docs/extensions/mv3/manifest/minimum_chrome_version?hl=id">versi Chrome minimum</a> dalam file manifes.</aside>
+
+<p>Pekerja layanan menggantikan halaman latar belakang atau peristiwa ekstensi untuk memastikan kode latar belakang tetap berada di luar thread utama. Hal ini memungkinkan ekstensi berjalan hanya saat diperlukan, sehingga menghemat resource.</p>
+
+<p>Halaman latar belakang telah menjadi komponen dasar ekstensi sejak diperkenalkan. Sederhananya, halaman latar belakang menyediakan lingkungan yang tidak bergantung pada jendela atau tab lain. Hal ini memungkinkan ekstensi mengamati dan bertindak sebagai respons terhadap peristiwa.</p>
+
+<p>Halaman ini menjelaskan tugas untuk mengonversi halaman latar belakang menjadi pekerja layanan ekstensi. Untuk informasi selengkapnya tentang pekerja layanan ekstensi secara umum, lihat tutorial <a href="https://developer.chrome.com/docs/extensions/mv3/getstarted/tut-quick-reference?hl=id">Menangani peristiwa dengan pekerja layanan</a> dan bagian <a href="https://developer.chrome.com/docs/extensions/mv3/service_workers?hl=id">Tentang pekerja layanan ekstensi</a>.</p>
+
+<h2 data-text="Perbedaan antara skrip latar belakang dan pekerja layanan ekstensi" id="differences-with-sws" tabindex="-1">Perbedaan antara skrip latar belakang dan pekerja layanan ekstensi</h2>
+
+<p>Dalam beberapa konteks, Anda akan melihat pekerja layanan ekstensi yang disebut 'skrip latar belakang'. Meskipun pekerja layanan ekstensi berjalan di latar belakang, menyebutnya sebagai skrip latar belakang agak menyesatkan karena menyiratkan kemampuan yang identik. Perbedaannya dijelaskan di bawah ini.</p>
+
+<h3 data-text="Perubahan dari halaman latar belakang" id="changes-over-bg" tabindex="-1">Perubahan dari halaman latar belakang</h3>
+
+<p>Pekerja layanan memiliki sejumlah perbedaan dengan halaman latar belakang.</p>
+
+<ul>
+<li>Fungsi ini berfungsi di luar thread utama, yang berarti tidak mengganggu konten ekstensi.</li>
+<li>Ekstensi ini memiliki kemampuan khusus seperti mencegat peristiwa pengambilan di origin ekstensi, seperti peristiwa dari pop-up toolbar.</li>
+<li>Mereka dapat berkomunikasi dan berinteraksi dengan konteks lain melalui <a href="https://developer.mozilla.org/docs/Web/API/Clients">antarmuka Klien</a>.</li>
+</ul>
+
+<h3 data-text="Perubahan yang perlu Anda lakukan" id="changes_youll_need_to_make" tabindex="-1">Perubahan yang perlu Anda lakukan</h3>
+
+<p>Anda harus melakukan beberapa penyesuaian kode untuk memperhitungkan perbedaan antara cara kerja skrip latar belakang dan pekerja layanan. Untuk memulai, cara pekerja layanan ditentukan dalam file manifes berbeda dengan cara skrip latar belakang ditentukan. Selain itu:</p>
+
+<ul>
+<li>Karena tidak dapat mengakses DOM atau antarmuka <code dir="ltr" translate="no">window</code>, Anda harus memindahkan panggilan tersebut ke API lain atau ke dokumen di luar layar.</li>
+<li>Pemroses peristiwa tidak boleh didaftarkan sebagai respons terhadap promise yang ditampilkan atau di dalam callback peristiwa.</li>
+<li>Karena tidak kompatibel dengan <code dir="ltr" translate="no">XMLHttpRequest()</code>, Anda harus mengganti panggilan ke antarmuka ini dengan panggilan ke <a href="https://developer.mozilla.org/docs/Web/API/Fetch_API/Using_Fetch"><code dir="ltr" translate="no">fetch()</code></a>.</li>
+<li>Karena dihentikan saat tidak digunakan, Anda harus mempertahankan status aplikasi, bukan mengandalkan variabel global. Menghentikan pekerja layanan juga dapat mengakhiri timer sebelum selesai. Anda harus menggantinya dengan alarm.</li>
+</ul>
+
+<p>Halaman ini menjelaskan tugas ini secara mendetail.</p>
+
+<h2 data-text='Memperbarui kolom "background" dalam manifes' background di manifes id="update-bg-field" tabindex="-1">Memperbarui kolom "background" dalam manifes</h2>
+
+<p>Di Manifest V3, halaman latar belakang diganti dengan <em>pekerja layanan</em>. Perubahan manifes tercantum di bawah.</p>
+
+<ul>
+<li>Ganti <code dir="ltr" translate="no">&quot;background.scripts&quot;</code> dengan <code dir="ltr" translate="no">&quot;background.service_worker&quot;</code> di <code dir="ltr" translate="no">manifest.json</code>. Perhatikan bahwa kolom <code dir="ltr" translate="no">&quot;service_worker&quot;</code> menggunakan string, bukan array string.</li>
+<li>Menghapus <code dir="ltr" translate="no">&quot;background.persistent&quot;</code> dari <code dir="ltr" translate="no">manifest.json</code>.</li>
+</ul>
+
+<div class="dcc-switcher">
+<div class="dcc-compare">
+  <div class="compare-worse">Manifes V2</div>
+ <pre class="prettyprint lang-json" translate="no" dir="ltr">{
+  ...
+  "background": {
+    "scripts": [
+      "backgroundContextMenus.js",
+      "backgroundOauth.js"
+    ],
+    "persistent": false
+  },
+  ...
+}
+</pre>
+
+</div>
+
+<div class="dcc-compare">
+  <div class="compare-better">Manifes V3</div>
+ <pre class="prettyprint lang-json" translate="no" dir="ltr">{
+  ...
+  "background": {
+    "service_worker": "service_worker.js",
+    "type": "module"
+  }
+  ...
+}
+</pre>
+</div>
+</div>
+
+<p>Kolom <code dir="ltr" translate="no">&quot;service_worker&quot;</code> menggunakan satu string. Anda hanya memerlukan kolom <code dir="ltr" translate="no">&quot;type&quot;</code> jika menggunakan <a href="https://web.dev/articles/es-modules-in-sw?hl=id#static_imports_only">modul ES</a> (menggunakan kata kunci <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import"><code dir="ltr" translate="no">import</code></a>). Nilainya akan selalu <code dir="ltr" translate="no">&quot;module&quot;</code>. Untuk mengetahui informasi selengkapnya, lihat <a href="https://developer.chrome.com/docs/extensions/mv3/service_workers/basics?hl=id#import-scripts">Dasar-dasar pekerja layanan ekstensi</a></p>
+
+<h2 data-text="Memindahkan panggilan DOM dan jendela ke dokumen di luar layar" id="move-dom-and-window" tabindex="-1">Memindahkan panggilan DOM dan jendela ke dokumen di luar layar</h2>
+
+<p>Beberapa ekstensi memerlukan akses ke DOM dan objek jendela tanpa membuka jendela atau tab baru secara visual. <a href="https://developer.chrome.com/docs/extensions/reference/offscreen?hl=id">Offscreen API</a> mendukung kasus penggunaan ini dengan membuka dan menutup dokumen yang tidak ditampilkan yang dipaketkan dengan ekstensi, tanpa mengganggu pengalaman pengguna. Kecuali untuk penerusan pesan, dokumen di luar layar tidak berbagi API dengan konteks ekstensi lain, tetapi berfungsi sebagai halaman web lengkap untuk berinteraksi dengan ekstensi.</p>
+
+<p>Untuk menggunakan Offscreen API, buat dokumen di balik layar dari pekerja layanan.</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">chrome.offscreen.createDocument({
+  url: chrome.runtime.getURL(&#39;offscreen.html&#39;),
+  reasons: [&#39;CLIPBOARD&#39;],
+  justification: &#39;testing the offscreen API&#39;,
+});
+</code></pre>
+<p>Dalam dokumen di balik layar, lakukan tindakan apa pun yang sebelumnya Anda jalankan dalam skrip latar belakang. Misalnya, Anda dapat menyalin teks yang dipilih di halaman host.</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">let textEl = document.querySelector(&#39;#text&#39;);
+textEl.value = data;
+textEl.select();
+document.execCommand(&#39;copy&#39;);
+</code></pre>
+<p>Berkomunikasi antara dokumen di luar layar dan pekerja layanan ekstensi menggunakan <a href="https://developer.chrome.com/docs/extensions/mv3/messaging?hl=id">pengiriman pesan</a>.</p>
+
+<h2 data-text="Mengonversi localStorage ke jenis lain" id="convert-localstorage" tabindex="-1">Mengonversi localStorage ke jenis lain</h2>
+
+<p>Antarmuka <a href="https://developer.mozilla.org/docs/Web/API/Storage"><code dir="ltr" translate="no">Storage</code></a> platform web (dapat diakses dari <code dir="ltr" translate="no">window.localStorage</code>) tidak dapat digunakan di pekerja layanan. Untuk mengatasinya, lakukan salah satu dari dua hal berikut. Pertama, Anda dapat menggantinya dengan panggilan ke mekanisme penyimpanan lain. Namespace <a href="https://developer.chrome.com/docs/extensions/reference/storage?hl=id#property-local"><code dir="ltr" translate="no">chrome.storage.local</code></a> akan melayani sebagian besar kasus penggunaan, tetapi <a href="https://developer.chrome.com/docs/extensions/mv3/service_workers/service-worker-lifecycle?hl=id#persist-data">opsi lain</a> tersedia.</p>
+
+<p>Anda juga dapat memindahkan panggilannya ke <a href="https://developer.chrome.com/docs/extensions/reference/offscreen?hl=id">dokumen di luar layar</a>. Misalnya, untuk memigrasikan data yang sebelumnya disimpan di <code dir="ltr" translate="no">localStorage</code> ke mekanisme lain:</p>
+
+<ol>
+<li>Buat dokumen di balik layar dengan rutinitas konversi dan pengendali <a href="https://developer.chrome.com/docs/extensions/reference/runtime?hl=id#event-onMessage"><code dir="ltr" translate="no">runtime.onMessage</code></a>.</li>
+<li>Tambahkan rutinitas konversi ke dokumen di balik layar.</li>
+<li>Di worker layanan ekstensi, periksa <a href="https://developer.chrome.com/docs/extensions/reference/storage?hl=id"><code dir="ltr" translate="no">chrome.storage</code></a> untuk data Anda.</li>
+<li>Jika data Anda tidak ditemukan, <a href="https://developer.chrome.com/docs/extensions/reference/offscreen?hl=id#method-createDocument">create</a> dokumen di luar layar dan panggil <a href="https://developer.chrome.com/docs/extensions/reference/runtime?hl=id#method-sendMessage"><code dir="ltr" translate="no">runtime.sendMessage()</code></a> untuk memulai rutinitas konversi.</li>
+<li>Di pengendali <code dir="ltr" translate="no">runtime.onMessage</code> yang Anda tambahkan ke dokumen di balik layar, panggil rutinitas konversi.</li>
+</ol>
+
+<p>Ada juga beberapa nuansa terkait cara kerja API penyimpanan web di ekstensi. Pelajari lebih lanjut di <a href="https://developer.chrome.com/docs/extensions/develop/concepts/storage-and-cookies?hl=id">Penyimpanan dan Cookie</a>.</p>
+
+<h2 data-text="Mendaftarkan pemroses secara sinkron" id="register-listeners" tabindex="-1">Mendaftarkan pemroses secara sinkron</h2>
+
+<p>Mendaftarkan pemroses secara asinkron (misalnya di dalam promise atau callback) tidak dijamin akan berfungsi di Manifes V3. Pertimbangkan kode berikut.</p>
+<pre class="prettyprint lang-js/2" translate="no" dir="ltr"><code translate="no" dir="ltr">chrome.storage.local.get([&#34;badgeText&#34;], ({ badgeText }) =&gt; {
+  chrome.browserAction.setBadgeText({ text: badgeText });
+  chrome.browserAction.onClicked.addListener(handleActionClick);
+});
+</code></pre>
+<p>Hal ini berfungsi dengan halaman latar belakang persisten karena halaman terus berjalan dan tidak pernah diinisialisasi ulang. Di Manifes V3, pekerja layanan akan diinisialisasi ulang saat peristiwa dikirim. Artinya, saat peristiwa diaktifkan, pemroses tidak akan didaftarkan (karena ditambahkan secara asinkron), dan peristiwa akan terlewat.</p>
+
+<p>Sebagai gantinya, pindahkan pendaftaran pemroses peristiwa ke tingkat teratas skrip Anda. Hal ini memastikan bahwa Chrome akan dapat segera menemukan dan memanggil pengendali klik tindakan Anda, meskipun ekstensi Anda belum selesai menjalankan logika startup-nya.</p>
+<pre class="prettyprint lang-js/0" translate="no" dir="ltr"><code translate="no" dir="ltr">chrome.action.onClicked.addListener(handleActionClick);
+
+chrome.storage.local.get([&#34;badgeText&#34;], ({ badgeText }) =&gt; {
+  chrome.action.setBadgeText({ text: badgeText });
+});
+</code></pre>
+<h2 data-text="Mengganti XMLHttpRequest() dengan fetch() global" id="replace-xmlhttprequest" tabindex="-1">Mengganti XMLHttpRequest() dengan fetch() global</h2>
+
+<p><code dir="ltr" translate="no">XMLHttpRequest()</code> tidak dapat dipanggil dari pekerja layanan, ekstensi, atau lainnya. Ganti panggilan dari skrip latar belakang Anda ke <code dir="ltr" translate="no">XMLHttpRequest()</code> dengan panggilan ke <a href="https://developer.mozilla.org/docs/Web/API/fetch"><code dir="ltr" translate="no">fetch()</code> global</a>.</p>
+
+<div class="dcc-compare">
+  <div class="compare-worse">XMLHttpRequest()</div>
+ <pre class="prettyprint lang-javascript" translate="no" dir="ltr">const xhr = new XMLHttpRequest();
+console.log('UNSENT', xhr.readyState);
+
+xhr.open('GET', '/api', true);
+console.log('OPENED', xhr.readyState);
+
+xhr.onload = () => {
+    console.log('DONE', xhr.readyState);
+};
+xhr.send(null);
+</pre>
+
+</div>
+
+<div class="dcc-compare">
+  <div class="compare-better">fetch()</div>
+ <pre class="prettyprint lang-js" translate="no" dir="ltr">const response = await fetch('https://www.example.com/greeting.json'')
+console.log(response.statusText);
+</pre>
+
+</div>
+
+<aside class="key-point"><b>Poin penting:</b> Jika sebelumnya Anda menggunakan <code dir="ltr" translate="no">XMLHttpRequest()</code> atau <code dir="ltr" translate="no">fetch()</code> untuk mengambil kode yang dapat dieksekusi, Anda tidak dapat melakukannya lagi. Semua kode yang dapat dieksekusi harus menjadi bagian dari paket ekstensi Anda. Untuk mengetahui informasi selengkapnya, lihat <a href="https://developer.chrome.com/docs/extensions/develop/migrate/improve-security?hl=id">Meningkatkan keamanan ekstensi</a>.</aside>
+
+<h2 data-text="Mempertahankan status" id="persist-states" tabindex="-1">Mempertahankan status</h2>
+
+<p>Pekerja layanan bersifat sementara, yang berarti pekerja layanan kemungkinan akan dimulai, dijalankan, dan dihentikan berulang kali selama sesi browser pengguna. Hal ini juga berarti bahwa data tidak langsung tersedia dalam variabel global karena konteks sebelumnya dihapus. Untuk mengatasi hal ini, gunakan API penyimpanan sebagai sumber tepercaya. Contoh akan menunjukkan cara melakukannya.</p>
+
+<p>Contoh berikut menggunakan variabel global untuk menyimpan nama. Di pekerja layanan, variabel ini dapat direset beberapa kali selama sesi browser pengguna.</p>
+
+<div class="dcc-compare">
+  <div class="compare-worse">Skrip latar belakang Manifes V2</div>
+ <pre class="prettyprint lang-js" translate="no" dir="ltr">let savedName = undefined;
+
+chrome.runtime.onMessage.addListener(({ type, name }) => {
+  if (type === "set-name") {
+    savedName = name;
+  }
+});
+
+chrome.browserAction.onClicked.addListener((tab) => {
+  chrome.tabs.sendMessage(tab.id, { name: savedName });
+});
+</pre>
+
+</div>
+
+<p>Untuk Manifes V3, ganti variabel global dengan panggilan ke <a href="https://developer.chrome.com/docs/extensions/reference/storage?hl=id">Storage API</a>.</p>
+
+<div class="dcc-compare">
+  <div class="compare-better">Pekerja layanan Manifes V3</div>
+ <pre class="prettyprint lang-js" translate="no" dir="ltr">chrome.runtime.onMessage.addListener(({ type, name }) => {
+  if (type === "set-name") {
+    chrome.storage.local.set({ name });
+  }
+});
+
+chrome.action.onClicked.addListener(async (tab) => {
+  const { name } = await chrome.storage.local.get(["name"]);
+  chrome.tabs.sendMessage(tab.id, { name });
+});
+</pre>
+
+</div>
+
+<h2 data-text="Mengonversi timer menjadi alarm" id="convert-timers" tabindex="-1">Mengonversi timer menjadi alarm</h2>
+
+<p>Biasanya, operasi yang tertunda atau berkala menggunakan metode <code dir="ltr" translate="no">setTimeout()</code> atau <code dir="ltr" translate="no">setInterval()</code>. Namun, API ini dapat gagal di pekerja layanan karena timer dibatalkan setiap kali pekerja layanan dihentikan.</p>
+
+<div class="dcc-compare">
+  <div class="compare-worse">Skrip latar belakang Manifes V2</div>
+ <pre class="prettyprint lang-js" translate="no" dir="ltr">// 3 minutes in milliseconds
+const TIMEOUT = 3 * 60 * 1000;
+setTimeout(() => {
+  chrome.action.setIcon({
+    path: getRandomIconPath(),
+  });
+}, TIMEOUT);
+</pre>
+
+</div>
+
+<p>Sebagai gantinya, gunakan <a href="https://developer.chrome.com/docs/extensions/reference/alarms?hl=id">Alarms API</a>. Seperti pemroses lainnya, pemroses alarm harus didaftarkan di tingkat teratas skrip Anda.</p>
+
+<div class="dcc-compare">
+  <div class="compare-better">Pekerja layanan Manifes V3</div>
+ <pre class="prettyprint lang-js" translate="no" dir="ltr">async function startAlarm(name, duration) {
+  await chrome.alarms.create(name, { delayInMinutes: 3 });
+}
+
+chrome.alarms.onAlarm.addListener(() => {
+  chrome.action.setIcon({
+    path: getRandomIconPath(),
+  });
+});
+</pre>
+
+</div>
+
+<h2 data-text="Mempertahankan pekerja layanan" id="keep-sw-alive" tabindex="-1">Mempertahankan pekerja layanan</h2>
+
+<p>Service worker secara definisi berbasis peristiwa dan akan dihentikan jika tidak ada aktivitas. Dengan demikian, Chrome dapat mengoptimalkan performa dan konsumsi memori ekstensi Anda. Pelajari lebih lanjut di <a href="https://developer.chrome.com/docs/extensions/mv3/service_workers/service-worker-lifecycle?hl=id#idle-shutdown">dokumentasi siklus proses pekerja layanan</a> kami. Kasus khusus mungkin memerlukan tindakan tambahan untuk memastikan bahwa pekerja layanan tetap aktif untuk waktu yang lebih lama.</p>
+
+<h3 data-text="Mempertahankan service worker tetap aktif hingga operasi yang berjalan lama selesai" id="keep_a_service_worker_alive_until_a_long-running_operation_is_finished" tabindex="-1">Mempertahankan service worker tetap aktif hingga operasi yang berjalan lama selesai</h3>
+
+<p>Selama operasi pekerja layanan yang berjalan lama dan tidak memanggil API ekstensi, pekerja layanan mungkin dinonaktifkan di tengah operasi. Contohnya mencakup:</p>
+
+<ul>
+<li><a href="https://developer.mozilla.org/docs/Web/API/Fetch_API">Permintaan <code dir="ltr" translate="no">fetch()</code></a> berpotensi memerlukan waktu lebih dari lima menit (misalnya, download besar pada koneksi yang berpotensi buruk). </li>
+<li>Penghitungan asinkron yang kompleks yang memerlukan waktu lebih dari 30 detik.</li>
+</ul>
+
+<p>Untuk memperpanjang masa aktif pekerja layanan dalam kasus ini, Anda dapat memanggil API ekstensi biasa secara berkala untuk mereset penghitung waktu tunggu. 
+Perhatikan bahwa ini hanya dicadangkan untuk kasus luar biasa dan dalam sebagian besar situasi biasanya ada cara yang lebih baik dan idiomatis untuk mencapai hasil yang sama.</p>
+
+<p>Contoh berikut menunjukkan fungsi helper <code dir="ltr" translate="no">waitUntil()</code> yang membuat service worker tetap aktif hingga promise tertentu diselesaikan:</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">async function waitUntil(promise) = {
+  const keepAlive = setInterval(chrome.runtime.getPlatformInfo, 25 * 1000);
+  try {
+    await promise;
+  } finally {
+    clearInterval(keepAlive);
+  }
+}
+
+waitUntil(someExpensiveCalculation());
+</code></pre>
+<aside class="key-point"><b>Poin penting:</b> API resmi yang mirip dengan <code dir="ltr" translate="no">waitUntil()</code> saat ini sedang dibahas di WECG. Untuk mengetahui detail selengkapnya, lihat <a href="https://github.com/w3c/webextensions/issues/416">diskusi di GitHub</a>.</aside>
+
+<h3 data-text="Mempertahankan pekerja layanan secara terus-menerus" id="keep_a_service_worker_alive_continuously" tabindex="-1">Mempertahankan pekerja layanan secara terus-menerus</h3>
+
+<p>Dalam kasus yang jarang terjadi, masa aktif perlu diperpanjang tanpa batas waktu. Kami telah mengidentifikasi perusahaan dan pendidikan sebagai kasus penggunaan terbesar, dan kami secara khusus mengizinkannya di sana, tetapi kami tidak mendukungnya secara umum. Dalam keadaan luar biasa ini, mempertahankan pekerja layanan tetap aktif dapat dilakukan dengan memanggil API ekstensi yang tidak penting secara berkala. Perlu diperhatikan bahwa rekomendasi ini hanya berlaku untuk ekstensi yang berjalan di perangkat terkelola untuk kasus penggunaan perusahaan atau pendidikan. Hal ini tidak diizinkan dalam kasus lain dan tim ekstensi Chrome berhak mengambil tindakan terhadap ekstensi tersebut pada masa mendatang. </p>
+
+<p>Gunakan cuplikan kode berikut untuk menjaga agar pekerja layanan tetap aktif:</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">/**
+ * Tracks when a service worker was last alive and extends the service worker
+ * lifetime by writing the current time to extension storage every 20 seconds.
+ * You should still prepare for unexpected termination - for example, if the
+ * extension process crashes or your extension is manually stopped at
+ * chrome://serviceworker-internals. 
+ */
+let heartbeatInterval;
+
+async function runHeartbeat() {
+  await chrome.storage.local.set({ &#39;last-heartbeat&#39;: new Date().getTime() });
+}
+
+/**
+ * Starts the heartbeat interval which keeps the service worker alive. Call
+ * this sparingly when you are doing work which requires persistence, and call
+ * stopHeartbeat once that work is complete.
+ */
+async function startHeartbeat() {
+  // Run the heartbeat once at service worker startup.
+  runHeartbeat().then(() =&gt; {
+    // Then again every 20 seconds.
+    heartbeatInterval = setInterval(runHeartbeat, 20 * 1000);
+  });
+}
+
+async function stopHeartbeat() {
+  clearInterval(heartbeatInterval);
+}
+
+/**
+ * Returns the last heartbeat stored in extension storage, or undefined if
+ * the heartbeat has never run before.
+ */
+async function getLastHeartbeat() {
+  return (await chrome.storage.local.get(&#39;last-heartbeat&#39;))[&#39;last-heartbeat&#39;];
+}
+</code></pre>
+
+  
+
+  
+
+  
+</div>
+
+  
+
+  
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+    
+    
+  
+
+  
+  <div class="devsite-floating-action-buttons">
+  
+  
+</div>
+</article>
+
+
+<devsite-content-footer class="nocontent">
+  <p>Kecuali dinyatakan lain, konten di halaman ini dilisensikan berdasarkan <a href="https://creativecommons.org/licenses/by/4.0/">Lisensi Creative Commons Attribution 4.0</a>, sedangkan contoh kode dilisensikan berdasarkan <a href="https://www.apache.org/licenses/LICENSE-2.0">Lisensi Apache 2.0</a>. Untuk mengetahui informasi selengkapnya, lihat <a href="https://developers.google.com/site-policies?hl=id">Kebijakan Situs Google Developers</a>. Java adalah merek dagang terdaftar dari Oracle dan/atau afiliasinya.</p>
+  <p>Terakhir diperbarui pada 2023-03-09 UTC.</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  
+  
+    <template class="devsite-content-data-template">
+      [[["Mudah dipahami","easyToUnderstand","thumb-up"],["Memecahkan masalah saya","solvedMyProblem","thumb-up"],["Lainnya","otherUp","thumb-up"]],[["Informasi yang saya butuhkan tidak ada","missingTheInformationINeed","thumb-down"],["Terlalu rumit/langkahnya terlalu banyak","tooComplicatedTooManySteps","thumb-down"],["Sudah usang","outOfDate","thumb-down"],["Masalah terjemahan","translationIssue","thumb-down"],["Masalah kode / contoh","samplesCodeIssue","thumb-down"],["Lainnya","otherDown","thumb-down"]],["Terakhir diperbarui pada 2023-03-09 UTC."],[],[]]
+    </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent" aria-label="Link footer">
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Beri kontribusi</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://issuetracker.google.com/issues/new?component=1400036&amp;template=1897236"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Laporkan bug
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://issuetracker.google.com/issues?q=status:open%20componentid:1400036&amp;s=created_time:desc"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+              
+              
+            
+          
+            Lihat masalah terbuka
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Konten terkait</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://blog.chromium.org/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Update Chromium
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/case-studies"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Studi kasus
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/deprecated"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Arsip
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://web.dev/shows"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+              
+              
+            
+          
+            Podcast &amp; acara
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Ikuti</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://twitter.com/ChromiumDev"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            @ChromiumDev pada X
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.youtube.com/user/ChromeDevelopers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            YouTube
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.linkedin.com/showcase/chrome-for-developers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Chrome for Developers di LinkedIn
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/static/blog/feed.xml"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+              
+              
+            
+          
+            RSS
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent">
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Link utilitas">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/terms?hl=id"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Persyaratan
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy?hl=id"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privasi
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="nl"
+        >Nederlands</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel></devsite-panel>
+        
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar></devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+      
+        <script type="application/json" analytics>[]</script>
+<script type="application/json" tag-management>{&#34;at&#34;: &#34;True&#34;, &#34;ga4&#34;: [], &#34;ga4p&#34;: [], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-5QF3RT2&#34;, &#34;purpose&#34;: 0}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;True&#34;, &#34;requested&#34;: &#34;id&#34;, &#34;served&#34;: &#34;id&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;Chrome Extensions&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;chrome&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    <script nonce="uHwIscjTvUQ7Am3itGGcxwGVwbY7DT">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/js/app_loader.js', '[53,"id",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d","https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome","https://chrome-dot-devsite-v2-prod-3p.appspot.com",null,null,["/_pwa/chrome/manifest.json","https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/images/favicon.png","https://www.gstatic.com/devrel-devsite/prod/vda41147226ae308b24384f785d31d739107d2716272d99cd11c490ff3892954d/chrome/images/lockup.svg","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyCNm9YxQumEXwGJgTDjxoxXK6m1F-9720Q","AIzaSyCc76DZePGtoyUjqKrLdsMGk_ry7sljLbY","developer.chrome.com","AIzaSyB9bqgQ2t11WJsOX8qNsCQ6U-w91mmqF-I","AIzaSyAdYnStPdzjcJJtQ0mvIaeaMKj7_t6J_Fg",null,null,null,["Profiles__enable_dashboard_curated_recommendations","DevPro__enable_developer_subscriptions","TpcFeatures__enable_unmirrored_page_left_nav","Profiles__enable_complete_playlist_endpoint","MiscFeatureFlags__enable_view_transitions","Search__enable_page_map","EngEduTelemetry__enable_engedu_telemetry","Analytics__enable_clearcut_logging","CloudShell__cloud_shell_button","Concierge__enable_pushui","Cloud__enable_cloud_dlp_service","CloudShell__cloud_code_overflow_menu","Cloud__enable_cloudx_experiment_ids","Profiles__enable_join_program_group_endpoint","MiscFeatureFlags__developers_footer_image","Profiles__enable_release_notes_notifications","Cloud__enable_cloudx_ping","Profiles__enable_public_developer_profiles","MiscFeatureFlags__emergency_css","Cloud__enable_legacy_calculator_redirect","Search__enable_ai_eligibility_checks","Profiles__enable_developer_profiles_callout","Experiments__reqs_query_experiments","Profiles__enable_completequiz_endpoint","BookNav__enable_tenant_cache_key","Cloud__enable_llm_concierge_chat","Profiles__enable_completecodelab_endpoint","Cloud__enable_free_trial_server_call","Profiles__require_profile_eligibility_for_signin","Search__enable_dynamic_content_confidential_banner","Profiles__enable_awarding_url","Cloud__enable_cloud_facet_chat","DevPro__enable_cloud_innovators_plus","Profiles__enable_recognition_badges","MiscFeatureFlags__enable_firebase_utm","MiscFeatureFlags__enable_explain_this_code","Profiles__enable_page_saving","MiscFeatureFlags__enable_project_variables","MiscFeatureFlags__enable_variable_operator","MiscFeatureFlags__developers_footer_dark_image","TpcFeatures__enable_mirror_tenant_redirects","Search__enable_suggestions_from_borg","Cloud__enable_cloud_shell_fte_user_flow","OnSwitch__enable","Cloud__enable_cloud_shell","Profiles__enable_profile_collections"],null,null,"AIzaSyA58TaKli1DculwmAmbpzLVGuWc8eCQgQc","https://developerscontentserving-pa.googleapis.com","AIzaSyDWBU60w0P9hEkr29kkksYs8Z7gvZ8u_wc","https://developerscontentsearch-pa.googleapis.com",2,4,null,"https://developerprofiles-pa.googleapis.com",[53,"chrome","Chrome for Developers","developer.chrome.com",null,"chrome-dot-devsite-v2-prod-3p.appspot.com",null,null,[null,null,null,null,null,null,null,null,null,null,null,[1],null,null,null,null,null,null,[1],null,null,null,null,[1,null,1],[1,1,null,1,1]],null,[69,null,null,null,null,null,"/images/lockup.svg","/images/touchicon-180.png",null,null,null,1,1,null,null,null,null,null,null,null,null,2,null,null,null,"/images/lockup-dark-theme.svg",[]],[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[[],[1,1]],[[null,null,null,null,null,["GTM-5QF3RT2"],null,null,null,null,null,[["GTM-5QF3RT2",1]],1]],null,4]]')
+  
+</script>
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>
