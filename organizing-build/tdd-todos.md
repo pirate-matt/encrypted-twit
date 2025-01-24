@@ -4,11 +4,21 @@ A key element of TDD is keeping focus on what's in front of you. To this effect 
 
 ## Current Focus: Slice 0 Annoying Setup
 
-- [ ] I want to TDD
-  - thinking vite, playwright, testing-library
-- [ ] Evaluate plasmo: https://github.com/PlasmoHQ/plasmo (yes/no; now/later)
+- [x] Evaluate plasmo: https://github.com/PlasmoHQ/plasmo (yes~~/no~~; now~~/later~~)
+  - [x] install plasmo
+  - [x] make a hello world message
+  - [•] change icon used
+  - [x] install tailwind
+- [x] I want to TDD
+  - [x] Set up testing environment (vitest, testing-library)
+  - [x] Configure test runners and scripts
+  - [x] Write first component test
 - [ ] Test drive a hello world
-  - [ ] Hello world on extension page
-  - [ ] Hello world injected into current page
+  - [x] Hello twits! on extension page
+  - [ ] Hello twits! injected into specific pages
+- [ ] Set up E2E testing
+  - [ ] Configure Playwright
+  - [ ] Write first E2E test for extension popup
+  - [ ] Write first E2E test for page injection
 
 ## Offloading ideas for other focuses
